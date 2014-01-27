@@ -1,0 +1,4 @@
+script:
+	- qmake -project
+	- qmake QtTest.pro
+	- make
