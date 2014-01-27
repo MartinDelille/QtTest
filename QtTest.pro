@@ -22,13 +22,14 @@ FORMS    += QtTestWindow.ui
 message("coucou c'est nous!")
 
 linux {
-message("i'm a linux")
+QMAKE_POST_LINK += echo "i m a linux";
 }
 
 mac {
-message("i'm a mac")
+QMAKE_POST_LINK += echo "i m a mac";
 }
 
 win32 {
-message("i'm a windows")
+QMAKE_POST_LINK += echo "i m a windows" &&
 }
+
