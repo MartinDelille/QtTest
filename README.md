@@ -1,4 +1,5 @@
 QtTest
 ======
 
-Test for travis ci
+Test for Travis continuous integration system.
+
