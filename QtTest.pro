@@ -20,3 +20,15 @@ HEADERS  += QtTestWindow.h
 FORMS    += QtTestWindow.ui
 
 message("coucou c'est nous!")
+
+linux {
+message("i'm a linux")
+}
+
+mac {
+message("i'm a mac")
+}
+
+win32 {
+message("i'm a windows")
+}
