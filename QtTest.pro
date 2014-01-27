@@ -18,3 +18,5 @@ SOURCES += main.cpp\
 HEADERS  += QtTestWindow.h
 
 FORMS    += QtTestWindow.ui
+
+message("coucou!")
