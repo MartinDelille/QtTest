@@ -33,3 +33,4 @@ win32 {
 QMAKE_POST_LINK += echo "i m a windows" &&
 }
 
+QMAKE_POST_LINK += echo "$$QT_MAJOR_VERSION $$QT_MINOR_VERSION"
