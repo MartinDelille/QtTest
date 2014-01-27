@@ -19,4 +19,4 @@ HEADERS  += QtTestWindow.h
 
 FORMS    += QtTestWindow.ui
 
-message("coucou!")
+message("coucou c'est nous!")
