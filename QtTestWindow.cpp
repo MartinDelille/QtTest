@@ -6,6 +6,7 @@ QtTestWindow::QtTestWindow(QWidget *parent) :
 	ui(new Ui::QtTestWindow)
 {
 	ui->setupUi(this);
+	pouet;
 }
 
 QtTestWindow::~QtTestWindow()
