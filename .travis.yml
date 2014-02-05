@@ -5,6 +5,7 @@ before_script:
 script:
  - /usr/local/opt/qt5/bin/qmake -project
  - /usr/local/opt/qt5/bin/qmake QtTest.pro
- - make
+# - make
+ - cat Makefile
 notifications:
 - email: false
