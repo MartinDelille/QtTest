@@ -1,6 +1,6 @@
 language: objective-c
 before_script:
- - brew update
+# - brew update
  - brew install qt5
 script:
  - /usr/local/opt/qt5/bin/qmake -project
