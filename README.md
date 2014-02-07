@@ -4,4 +4,4 @@ QtTest
 Test for Travis continuous integration system.
 
 ### Status
-[![Build Status](https://travis-ci.org/MartinDelille/QtTest.png)](https://travis-ci.org/MartinDelille/QtTest)
+[![Build Status](https://travis-ci.org/Phonations/TravisTest.png)](https://travis-ci.org/Phonations/TravisTest)
