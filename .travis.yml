@@ -9,4 +9,4 @@ script:
  - cat Makefile
  - make
 notifications:
-- email: false
+- email: true
