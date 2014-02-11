@@ -6,7 +6,6 @@ before_script:
 script:
  - /usr/local/opt/qt5/bin/qmake -project
  - /usr/local/opt/qt5/bin/qmake QtTest.pro
- - cat Makefile
  - make
 notifications:
-- email: true
+- irc: irc.freenode.net#phonations
