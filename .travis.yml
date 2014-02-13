@@ -7,6 +7,6 @@ script:
  - /usr/local/opt/qt5/bin/qmake -project
  - /usr/local/opt/qt5/bin/qmake QtTest.pro
  - make
- - doxygen
+ - ./.scriptDoxy.sh
 notifications:
  irc: "irc.freenode.net#phonations"
