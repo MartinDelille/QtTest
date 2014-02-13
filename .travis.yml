@@ -6,7 +6,7 @@ before_script:
 script:
  - mkdir build && cd build
  - /usr/local/opt/qt5/bin/qmake -project
- - /usr/local/opt/qt5/bin/qmake QtTest.pro
+ - /usr/local/opt/qt5/bin/qmake ../QtTest.pro
  - make
  - cd ..
  - ./.scriptDoxy.sh
