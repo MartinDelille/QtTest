@@ -1,15 +1,15 @@
 # setting objective-c language allow to have a mac build environment:
 language: objective-c
 before_script:
- - brew update &> /dev/null
+# - brew update &> /dev/null
 # - brew install qt5 
  - brew install doxygen
 script:
- - mkdir build && cd build
+# - mkdir build && cd build
 # - /usr/local/opt/qt5/bin/qmake -project
 # - /usr/local/opt/qt5/bin/qmake ../QtTest.pro
 # - make
- - pwd && cd .. && pwd && ls -al
+ - pwd && ls -al
  - ./.scriptDoxy.sh
  - ls -al
 notifications:
