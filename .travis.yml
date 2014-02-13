@@ -2,10 +2,11 @@
 language: objective-c
 before_script:
  - brew update
- - brew install qt5
+ - brew install qt5 doxygen
 script:
  - /usr/local/opt/qt5/bin/qmake -project
  - /usr/local/opt/qt5/bin/qmake QtTest.pro
  - make
+ - doxygen
 notifications:
  irc: "irc.freenode.net#phonations"

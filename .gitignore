@@ -1,1 +1,5 @@
 *.pro.user
+
+#Doxygen
+doc/html
+doxygen_error.log
