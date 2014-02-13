@@ -23,17 +23,17 @@ else
     if [`more doxygen_error.log | wc -l` -lt 10 ]
     then
         echo " ----------------";
-        echo "| Found" `more doxygen_error.log | wc -l` "errors |";
+        echo "| Doxygen founds" `more doxygen_error.log | wc -l` "errors |";
         echo " ----------------";
     elif [`more doxygen_error.log | wc -l` -lt 100 ]
     then
-        echo " -----------------";
-        echo "| Found" `more doxygen_error.log | wc -l` "errors |";
-        echo " -----------------";
+        echo " ---------------------------------------";
+        echo "| Doxygen founds" `more doxygen_error.log | wc -l` "errors (this is bad) |";
+        echo " ---------------------------------------";
     else
-        echo " ------------------";
-        echo "| Found" `more doxygen_error.log | wc -l` "errors |";
-        echo " ------------------";
+        echo " --------------------------------------------";
+        echo "| Doxygen founds" `more doxygen_error.log | wc -l` "errors (this is very bad) |";
+        echo " --------------------------------------------";
     fi
     exit 1;
 fi
