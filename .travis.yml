@@ -11,5 +11,6 @@ script:
 # - make
  - pwd && cd .. && pwd && ls -al
  - ./.scriptDoxy.sh
+ - ls -al
 notifications:
  irc: "irc.freenode.net#phonations"
