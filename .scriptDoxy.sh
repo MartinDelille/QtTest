@@ -11,7 +11,7 @@ echo "Done";
 
 #run the doxygen
 echo "Running Doxygen...";
-doxygenl;
+doxygen;
 echo "Done";
 
 if [`more doxygen_error.log | wc -l` -eq 0 ];
