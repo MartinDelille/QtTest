@@ -8,7 +8,7 @@ script:
  - /usr/local/opt/qt5/bin/qmake -project
  - /usr/local/opt/qt5/bin/qmake ../QtTest.pro
  - make
- - cd ..
+ - cd .. && pwd && ls -al
  - ./.scriptDoxy.sh
 notifications:
  irc: "irc.freenode.net#phonations"
