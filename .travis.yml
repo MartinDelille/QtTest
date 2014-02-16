@@ -4,5 +4,6 @@ script:
 - cd libltc
 - aclocal
 - autoheader
+- glibtoolize –-copy
 notifications:
  irc: "irc.freenode.net#phonations"
