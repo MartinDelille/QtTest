@@ -1,9 +1,10 @@
+#test
 language: objective-c
 script:
 - git clone https://github.com/Phonations/libltc.git
 - cd libltc
 - aclocal
 - autoheader
-- glibtoolize –-copy
+- glibtoolize --copy
 notifications:
  irc: "irc.freenode.net#phonations"
