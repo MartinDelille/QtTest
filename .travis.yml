@@ -1,15 +1,5 @@
 language: objective-c
 script:
 - git clone https://github.com/Phonations/libltc.git
-- cd libltc
-- aclocal
-- autoheader
-- glibtoolize –-copy
-- autoconf
-- automake –-gnu –-add-missing –-copy
-- ./configure
-- make
-- sudo make install
-- cd ..
 notifications:
  irc: "irc.freenode.net#phonations"
