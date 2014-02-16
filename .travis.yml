@@ -1,12 +1,5 @@
-# setting objective-c language allow to have a mac build environment:
 language: objective-c
-#before_script:
-#- brew update
-#- brew install qt5
 script:
-#- /usr/local/opt/qt5/bin/qmake -project
-#- /usr/local/opt/qt5/bin/qmake QtTest.pro
-#- make
 - git clone https://github.com/Phonations/libltc.git
 - cd libltc
 - aclocal
