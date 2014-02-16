@@ -1,6 +1,6 @@
 # setting objective-c language allow to have a mac build environment:
 language: objective-c
-before_script:
+#before_script:
 #- brew update
 #- brew install qt5
 script:
