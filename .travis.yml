@@ -10,4 +10,7 @@ script:
 - ls
 notifications:
  irc: 
-  - "irc.freenode.net#poupoupou"
+  channels:
+   - "irc.freenode.net#poupoupou"
+   - "irc.freenode.net#phonations"
+  on_success: always
