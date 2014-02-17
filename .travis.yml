@@ -10,4 +10,4 @@ script:
 - ls
 notifications:
  irc: 
-  - "irc.freenode.net#travis"
+  - "irc.freenode.net#poupoupou"
