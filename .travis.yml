@@ -11,6 +11,7 @@ script:
 notifications:
  irc: 
   channels:
+   - "phonations.com#joker"
    - "irc.freenode.net#poupoupou"
    - "irc.freenode.net#phonations"
   on_success: always
