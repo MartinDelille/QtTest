@@ -12,3 +12,13 @@ QtTestWindow::~QtTestWindow()
 {
 	delete ui;
 }
+
+void QtTestWindow::setTextLabel(QString content)
+{
+	ui->lineEdit->setText(content);
+}
+
+QString QtTestWindow::textLabel()
+{
+	return ui->lineEdit->text();
+}

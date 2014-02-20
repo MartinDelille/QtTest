@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QThread>
 #include <QDebug>
+#include <TestGui.h>
 
 int main(int argc, char *argv[])
 {
@@ -18,15 +19,22 @@ int main(int argc, char *argv[])
 	if(testMode) {
 		qDebug() << "Entering test mode";
 
-		QThread::msleep(1000);
 		qDebug() << "One";
-		QThread::msleep(1000);
+		w.setTextLabel("One");
+		if(w.textLabel() != "One")
+			return -1;
 		qDebug() << "Two";
-		QThread::msleep(1000);
+		w.setTextLabel("Two");
+		if(w.textLabel() != "Two")
+			return -1;
 		qDebug() << "Three";
-		QThread::msleep(1000);
+		w.setTextLabel("Three");
+		if(w.textLabel() != "Three")
+			return -1;
 		qDebug() << "Bye";
-		return 0;
+
+		TestGui testGui;
+		return QTest::qExec(&testGui);
 	}
 	else
 		return a.exec();

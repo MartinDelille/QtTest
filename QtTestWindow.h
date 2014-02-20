@@ -15,6 +15,8 @@ public:
 	explicit QtTestWindow(QWidget *parent = 0);
 	~QtTestWindow();
 
+	void setTextLabel(QString content);
+	QString textLabel();
 private:
 	Ui::QtTestWindow *ui;
 };
