@@ -1,5 +1,5 @@
 # setting objective-c language allow to have a mac build environment:
-env:
+matrix:
   - language: objective-c
   - language: c
 #before_script:
