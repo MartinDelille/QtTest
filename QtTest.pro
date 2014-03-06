@@ -4,16 +4,18 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets
+QT       += core gui widgets testlib
 
 TARGET = QtTest
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        QtTestWindow.cpp
+        QtTestWindow.cpp \
+    MyTest.cpp
 
-HEADERS  += QtTestWindow.h
+HEADERS  += QtTestWindow.h \
+    MyTest.h
 
 FORMS    += QtTestWindow.ui
 
