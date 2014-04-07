@@ -1,7 +1,6 @@
 language: objective-c
 before_script: 
 script:
-- chmod +x update-gh-pages.sh
 - "./update-gh-pages.sh"
 notifications:
   irc:
