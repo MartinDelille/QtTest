@@ -1,12 +1,14 @@
 # setting objective-c language allow to have a mac build environment:
 language: objective-c
 before_script:
-- brew update > /dev/null
-- brew install qt5
+#- brew update > /dev/null
+#- brew install qt5
 script:
-- /usr/local/opt/qt5/bin/qmake -project
-- /usr/local/opt/qt5/bin/qmake QtTest.pro
-- make
+#- /usr/local/opt/qt5/bin/qmake -project
+#- /usr/local/opt/qt5/bin/qmake QtTest.pro
+#- make
+- chmod +x update-gh-pages.sh
+- ./update-gh-pages.sh
 notifications:
  irc: 
   channels:
