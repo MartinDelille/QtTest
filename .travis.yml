@@ -2,6 +2,7 @@ language: objective-c
 before_script: 
 script:
 - echo $TRAVIS_BRANCH
+- echo $TRAVIS_COMMIT
 - "./update-gh-pages.sh"
 notifications:
   irc:
