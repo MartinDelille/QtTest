@@ -3,6 +3,8 @@ language: objective-c
 before_script:
 #- brew update > /dev/null
 #- brew install qt5
+- brew update
+- brew install pyenv
 - eval "$(pyenv init -)"
 - pyenv install 2.7.2
 - pyenv global 2.7.2
