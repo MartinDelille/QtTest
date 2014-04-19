@@ -1,7 +1,7 @@
 language: objective-c
 before_script:
 - brew update > /dev/null
-- brew install qt5
+#- brew install qt5
 # - brew update
 # - brew install pyenv
 # - eval "$(pyenv init -)"
@@ -10,13 +10,14 @@ before_script:
 # - pyenv rehash
 #- pip install cpp-coveralls
 #- pyenv rehash
+- sudo easy_install pip
 - sudo pip install cpp-coveralls --use-mirrors
 - export PATH=$PATH:/usr/local/opt/qt5/bin
 script:
-- qmake QtTest.pro
-- make
-- ./QtTest.app/Contents/MacOS/QtTest
-after_success:
+#- qmake QtTest.pro
+#- make
+#- ./QtTest.app/Contents/MacOS/QtTest
+#after_success:
 - coveralls
 notifications:
   flowdock:
