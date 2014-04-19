@@ -21,6 +21,9 @@ FORMS    += QtTestWindow.ui
 
 message("coucou c'est nous!")
 
+QMAKE_CXXFLAGS += -g -fprofile-arcs -ftest-coverage -O0
+QMAKE_LFLAGS += -g -fprofile-arcs -ftest-coverage  -O0
+
 linux {
 QMAKE_POST_LINK += echo "i m a linux";
 }
