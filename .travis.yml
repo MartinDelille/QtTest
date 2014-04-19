@@ -1,4 +1,3 @@
-# setting objective-c language allow to have a mac build environment:
 language: objective-c
 before_script:
 - brew update > /dev/null
@@ -18,8 +17,6 @@ script:
 - make
 after_success:
 - coveralls
-#notifications:
-# irc:
-#  channels:
-#   - "phonations.com#joker"
-#  on_success: always
+notifications:
+  flowdock:
+    secure: EuYKg3qUYqBuqlGnYcrzPa4d3Y+DzzhsHzy9QPCcq0rHwgcWNfciIXAerUtSrM2qW8W3luNtwLR8HqnMYFbhvbaigm1OoJ0NgZxxUXwxv1YR9BSNj8Kwq+09Ve4g+svkvCa9vp6UKkS6DVv2OvgpzKFXFyyqOdQUXwMug6a8UX8=
