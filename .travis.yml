@@ -15,6 +15,7 @@ before_script:
 script:
 - qmake QtTest.pro
 - make
+- ./QtTest.app/Contents/MacOS/QtTest
 after_success:
 - coveralls
 notifications:
