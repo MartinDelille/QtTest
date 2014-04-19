@@ -12,11 +12,11 @@ before_script:
 - pip install cpp-coveralls
 - pyenv rehash
 - sudo pip install cpp-coveralls --use-mirrors
+- export PATH=$PATH:/usr/local/opt/qt5/bin
 script:
-- /usr/local/opt/qt5/bin/qmake -project
-- /usr/local/opt/qt5/bin/qmake QtTest.pro
+- qmake QtTest.pro
 - make
-#after_success:
+after_success:
 - coveralls
 #notifications:
 # irc:
