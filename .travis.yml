@@ -9,6 +9,7 @@ before_script:
 # - pyenv rehash
 # - pip install cpp-coveralls
 # - pyenv rehash
+- sudo easyinstall pip
 - sudo pip install cpp-coveralls
 # - export PATH=$PATH:/usr/local/opt/qt5/bin
 script:
