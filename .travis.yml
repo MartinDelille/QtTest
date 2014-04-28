@@ -7,7 +7,7 @@ script:
 #- /usr/local/opt/qt5/bin/qmake -project
 #- /usr/local/opt/qt5/bin/qmake QtTest.pro
 #- make
-- echo TRAVIS
+- echo $TRAVIS
 notifications:
  irc:
   channels:
