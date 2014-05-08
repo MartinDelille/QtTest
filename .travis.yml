@@ -1,7 +1,10 @@
 language: objective-c
 env:
-- JOB="COUCOU"
-- JOB="CHOUETTE"
+  global:
+    - POUET=$HOME
+  matrix:
+  - JOB="COUCOU"
+  - JOB="CHOUETTE"
 #before_script:
 #- brew update > /dev/null
 #- brew install qt5
@@ -9,6 +12,7 @@ script:
 #- "/usr/local/opt/qt5/bin/qmake -project"
 #- "/usr/local/opt/qt5/bin/qmake QtTest.pro"
 #- make
+- echo $POUET
 - if [[ "$JOB" == "COUCOU" ]]; then echo "Coucou!"; fi
 - if [[ "$JOB" == "CHOUETTE" ]]; then echo "Chouette!"; fi
 notifications:
