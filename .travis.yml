@@ -20,4 +20,5 @@ script:
 - coveralls
 notifications:
   flowdock:
-    secure: EuYKg3qUYqBuqlGnYcrzPa4d3Y+DzzhsHzy9QPCcq0rHwgcWNfciIXAerUtSrM2qW8W3luNtwLR8HqnMYFbhvbaigm1OoJ0NgZxxUXwxv1YR9BSNj8Kwq+09Ve4g+svkvCa9vp6UKkS6DVv2OvgpzKFXFyyqOdQUXwMug6a8UX8=
+    secure: NLEntzrq62J7GBG9I0VpByNGjGwH7OG1LA5Z4lSb2GQtLaWzSy7A2P/NbGesUs1JAMc/u6iTv0Cnsg2lhCQcg7kyin3N0cdwU6e/OtrpkOFQFCwSTUAJVomlSATB9JWPAzq8PFFiRoxordUiVIw6enbvTNNVvlgX/BMLz0X752w=
+  email: false
