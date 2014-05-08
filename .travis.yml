@@ -1,11 +1,11 @@
 language: objective-c
-before_script:
-- brew update > /dev/null
-- brew install qt5
+#before_script:
+#- brew update > /dev/null
+#- brew install qt5
 script:
-- "/usr/local/opt/qt5/bin/qmake -project"
-- "/usr/local/opt/qt5/bin/qmake QtTest.pro"
-- make
+#- "/usr/local/opt/qt5/bin/qmake -project"
+#- "/usr/local/opt/qt5/bin/qmake QtTest.pro"
+#- make
 notifications:
   flowdock:
     secure: NLEntzrq62J7GBG9I0VpByNGjGwH7OG1LA5Z4lSb2GQtLaWzSy7A2P/NbGesUs1JAMc/u6iTv0Cnsg2lhCQcg7kyin3N0cdwU6e/OtrpkOFQFCwSTUAJVomlSATB9JWPAzq8PFFiRoxordUiVIw6enbvTNNVvlgX/BMLz0X752w=
