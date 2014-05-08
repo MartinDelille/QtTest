@@ -1,7 +1,7 @@
 language: objective-c
 env:
-- COUCOU
-- CHOUETTE
+- COUCOU=1
+- CHOUETTE=1
 #before_script:
 #- brew update > /dev/null
 #- brew install qt5
