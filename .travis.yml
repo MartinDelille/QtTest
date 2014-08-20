@@ -2,11 +2,22 @@
 os:
 - linux
 - osx
+env:
+  global:
+    - POUET=pouetpouet
+  matrix:
+    - JOB=BOBOBO
+    - JOB=COCOCO
+matrix:
+  exclude:
+    - os: linux
+      env: JOB=BOBOBO
 #before_script:
 #- brew update > /dev/null
 #- brew install qt5
 script:
   - ./checkos.sh
+  - echo $JOB
 #- /usr/local/opt/qt5/bin/qmake -project
 #- /usr/local/opt/qt5/bin/qmake QtTest.pro
 #- make
