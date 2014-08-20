@@ -8,10 +8,13 @@ env:
   matrix:
     - JOB=BOBOBO
     - JOB=COCOCO
+    - JOB=DODODO
 matrix:
   exclude:
     - os: linux
       env: JOB=BOBOBO
+    - os: linux
+      env: JOB=DODODO
 #before_script:
 #- brew update > /dev/null
 #- brew install qt5
