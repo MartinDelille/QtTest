@@ -8,7 +8,7 @@ script:
 - qmake QtTest.pro
 - make
 - ls -l
-- export RELEASED_PACKAGE_FILENAME=$(ls -1 *.dmg)
+- export RELEASED_PACKAGE_FILENAME=$(ls -1 *_$TRAVIS_TAG.dmg)
 notifications:
   flowdock:
     secure: NLEntzrq62J7GBG9I0VpByNGjGwH7OG1LA5Z4lSb2GQtLaWzSy7A2P/NbGesUs1JAMc/u6iTv0Cnsg2lhCQcg7kyin3N0cdwU6e/OtrpkOFQFCwSTUAJVomlSATB9JWPAzq8PFFiRoxordUiVIw6enbvTNNVvlgX/BMLz0X752w=
