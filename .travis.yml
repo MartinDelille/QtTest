@@ -11,3 +11,12 @@ notifications:
   flowdock:
     secure: NLEntzrq62J7GBG9I0VpByNGjGwH7OG1LA5Z4lSb2GQtLaWzSy7A2P/NbGesUs1JAMc/u6iTv0Cnsg2lhCQcg7kyin3N0cdwU6e/OtrpkOFQFCwSTUAJVomlSATB9JWPAzq8PFFiRoxordUiVIw6enbvTNNVvlgX/BMLz0X752w=
   email: false
+addons:
+  coverity_scan:
+    project:
+      name: "Phonations/TravisTest"
+      description: "Build submitted via Travis CI"
+    notification_email: martin@phonations.com
+    build_command_prepend: qmake QtTest.pro
+    build_command:   "make -j 4"
+    branch_pattern: coverity
