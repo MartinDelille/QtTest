@@ -1,2 +1,4 @@
-install:
-  - choco install qt-sdk-windows-x64-mingw_opengl_seh
+#install:
+#  - choco install qt-sdk-windows-x64-mingw_opengl_seh
+build:
+  - dir
