@@ -27,7 +27,7 @@ QMAKE_POST_LINK += echo "i m a linux";
 mac {
 QMAKE_POST_LINK += echo "i m a mac";
 
-QMAKE_POST_LINK += macqtdeploy QtTest.app -dmg;
+QMAKE_POST_LINK += macdeployqt QtTest.app -dmg;
 #QMAKE_POST_LINK += mv QtTest.dmg QtTest_${VERSION}.dmg;
 }
 
