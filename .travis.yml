@@ -1,12 +1,16 @@
 os: osx
 env:
+  matrix:
   - PATH=$PATH:/usr/local/opt/qt5/bin
+  global:
+    secure: ZgXEgOBy15tqNeMrl64NqRWYCNSSEYQfaKWsIloRiTePqRUL981tIqSIyPBdToPJgj5rRCMtRGiI6yD5DaGvY1aD0xg2f9TM5bSkM5hT0ZPc5CckAXm5iZs1G7mLzd4m6fc0NRrWgontvleTPF53g2P6DtzQMOrBcAAd92FxtBA=
 before_script:
-- brew update > /dev/null
-- brew install qt5
+#- brew update > /dev/null
+#- brew install qt5
 script:
-- qmake QtTest.pro
-- make
+#- qmake QtTest.pro
+#- make
+- echo "coucou"
 notifications:
   flowdock:
     secure: NLEntzrq62J7GBG9I0VpByNGjGwH7OG1LA5Z4lSb2GQtLaWzSy7A2P/NbGesUs1JAMc/u6iTv0Cnsg2lhCQcg7kyin3N0cdwU6e/OtrpkOFQFCwSTUAJVomlSATB9JWPAzq8PFFiRoxordUiVIw6enbvTNNVvlgX/BMLz0X752w=
@@ -14,9 +18,9 @@ notifications:
 addons:
   coverity_scan:
     project:
-      name: "Phonations/TravisTest"
-      description: "Build submitted via Travis CI"
+      name: Phonations/TravisTest
+      description: Build submitted via Travis CI
     notification_email: martin@phonations.com
-    build_command_prepend: qmake QtTest.pro
-    build_command:   "make -j 4"
+#    build_command_prepend: qmake QtTest.pro
+#    build_command: make -j 4
     branch_pattern: coverity
