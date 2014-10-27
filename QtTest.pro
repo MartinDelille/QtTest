@@ -9,6 +9,7 @@ QT       += core gui widgets
 TARGET = QtTest
 TEMPLATE = app
 
+VERSION = 1.0.1
 
 SOURCES += main.cpp\
         QtTestWindow.cpp
@@ -25,6 +26,9 @@ QMAKE_POST_LINK += echo "i m a linux";
 
 mac {
 QMAKE_POST_LINK += echo "i m a mac";
+
+QMAKE_POST_LINK += macqtdeploy QtTest.app -dmg;
+#QMAKE_POST_LINK += mv QtTest.dmg QtTest_${VERSION}.dmg;
 }
 
 win32 {
