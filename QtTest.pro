@@ -18,7 +18,7 @@ HEADERS  += QtTestWindow.h
 
 FORMS    += QtTestWindow.ui
 
-message("coucou c'est nous!")
+message("Coucou c'est nous!")
 
 linux {
 QMAKE_POST_LINK += echo "i m a linux";
