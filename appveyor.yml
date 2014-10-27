@@ -3,5 +3,4 @@
 build_script:
 #  - qmake QtTest.pro
 #  - make
-  - dir \Libraries
-  - dir \Libraries\Qt
+  - set
