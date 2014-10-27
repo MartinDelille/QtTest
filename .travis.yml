@@ -1,10 +1,11 @@
-language: objective-c
+os: osx
+env:
+  - PATH=$PATH:/usr/local/opt/qt5/bin
 before_script:
 - brew update > /dev/null
 - brew install qt5
 script:
-- "/usr/local/opt/qt5/bin/qmake -project"
-- "/usr/local/opt/qt5/bin/qmake QtTest.pro"
+- qmake QtTest.pro
 - make
 notifications:
   flowdock:
