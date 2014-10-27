@@ -8,6 +8,7 @@ script:
 - qmake QtTest.pro
 - make
 - ls -l
+- export RELEASED_PACKAGE_FILENAME=$(ls -1 *.dmg)
 notifications:
   flowdock:
     secure: NLEntzrq62J7GBG9I0VpByNGjGwH7OG1LA5Z4lSb2GQtLaWzSy7A2P/NbGesUs1JAMc/u6iTv0Cnsg2lhCQcg7kyin3N0cdwU6e/OtrpkOFQFCwSTUAJVomlSATB9JWPAzq8PFFiRoxordUiVIw6enbvTNNVvlgX/BMLz0X752w=
@@ -16,7 +17,7 @@ deploy:
   provider: releases
   api_key:
     secure: BG0kSSy01X5l5ccjJSqbTk1T22rjmHs6PuzeS2+ZQZa4FRuFsQ7Ebha8HoK6r65Hou6ZmRWJbU6amu7LP28cVb1Vjc0FJ2faGaXIfslgbTI1K2XFyz7W5AMmkPPcY66/VxOtdK/L3XpfQBBgdhEISOAWZYsJe09FhL03bhwelv8=
-  file: QtTest_$(TRAVIS_TAG).dmg
+  file: ${RELEASED_PACKAGE_FILENAME}
   skip_cleanup: true
   on:
     tags: true
