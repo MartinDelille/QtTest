@@ -1,6 +1,5 @@
 install:
   - choco install qt-sdk-windows-x64-mingw_opengl_seh
-before_build:
+build_script:
   - qmake QtTest.pro
   - make
-build: off
