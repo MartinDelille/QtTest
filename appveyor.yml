@@ -1,6 +1,7 @@
 install:
   - choco install qt-sdk-windows-x64-mingw_opengl_seh
 build_script:
+  - dir C:\Qt
   - dir C:\Qt\5.3
   - set QTDIR="C:\Qt\5.3\mingw482_32"
   - set PATH=%PATH%;%QTDIR%\bin
