@@ -4,3 +4,4 @@ build_script:
 #  - qmake QtTest.pro
 #  - make
   - set
+  - dir c:\
