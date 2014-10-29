@@ -5,4 +5,4 @@ build_script:
   - dir C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
   - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
   - qmake QtTest.pro
-  - make
+  - mingw32-make
