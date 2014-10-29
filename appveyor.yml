@@ -1,8 +1,9 @@
 install:
 #  - choco install qt-sdk-windows-x64-mingw_opengl_seh
+  - choco install Wget
   - set QTDIR="C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\qt-5.3.2-x64-mingw491r1-seh-opengl"
 build_script:
-  - wget https://www.libsdl.org/release/SDL2-devel-2.0.3-mingw.tar.gz
+  - Wget https://www.libsdl.org/release/SDL2-devel-2.0.3-mingw.tar.gz
   - dir C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
   - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
   - qmake QtTest.pro
