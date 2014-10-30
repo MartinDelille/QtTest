@@ -11,11 +11,11 @@ install:
   - Wget https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-mingw.tar.gz --no-check-certificate
   - 7z x SDL2_image-devel-2.0.0-mingw.tar.gz
   - 7z x SDL2_image-devel-2.0.0-mingw.tar
-  - set SDL_IMAGE_PATH=%CD%\SDL2_image-devel-2.0.0\i686-w64-mingw32\
+  - set SDL_IMAGE_PATH=%CD%\SDL2_image-2.0.0\i686-w64-mingw32\
   - Wget https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-devel-2.0.12-mingw.tar.gz --no-check-certificate
   - 7z x SDL2_ttf-devel-2.0.12-mingw.tar.gz
   - 7z x SDL2_ttf-devel-2.0.12-mingw.tar
-  - set SDL_TTF_PATH=%CD%\SDL2_ttf-devel-2.0.12\i686-w64-mingw32\
+  - set SDL_TTF_PATH=%CD%\SDL2_ttf-2.0.12\i686-w64-mingw32\
 build_script:
   - dir %SDL_PATH%
   - dir %SDL_IMAGE_PATH%
