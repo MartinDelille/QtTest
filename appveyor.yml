@@ -5,6 +5,7 @@ install:
 build_script:
   - Wget https://www.libsdl.org/release/SDL2-devel-2.0.3-mingw.tar.gz --no-check-certificate
   - dir
+  - dir C:\
   - dir C:\ProgramData
   - dir C:\ProgramData\7zip
   - 7zip SDL2-devel-2.0.3-mingw.tar.gz
