@@ -11,6 +11,8 @@ build_script:
   - mingw32-make
   - set QTTEST_RELEASE_PATH=%CD%
   - dir
+  - cd debug
+  - dir
   - iscc TravisSetup.iss
   - dir
 # deploy:
