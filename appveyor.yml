@@ -1,21 +1,24 @@
 install:
-  - choco install qt-sdk-windows-x64-mingw_opengl_seh
-  - choco install Wget 7zip
-  - set QTDIR="C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\qt-5.3.2-x64-mingw491r1-seh-opengl"
-  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
-  - set PATH=%PATH%;"C:\Program Files\7-Zip";
-  - Wget https://www.libsdl.org/release/SDL2-devel-2.0.3-mingw.tar.gz --no-check-certificate
-  - 7z x SDL2-devel-2.0.3-mingw.tar.gz
-  - 7z x SDL2-devel-2.0.3-mingw.tar
-  - set SDL_PATH=%CD%\SDL2-2.0.3\i686-w64-mingw32\
-  - Wget https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-mingw.tar.gz --no-check-certificate
-  - 7z x SDL2_image-devel-2.0.0-mingw.tar.gz
-  - 7z x SDL2_image-devel-2.0.0-mingw.tar
-  - set SDL_IMAGE_PATH=%CD%\SDL2_image-2.0.0\i686-w64-mingw32\
-  - Wget https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-devel-2.0.12-mingw.tar.gz --no-check-certificate
-  - 7z x SDL2_ttf-devel-2.0.12-mingw.tar.gz
-  - 7z x SDL2_ttf-devel-2.0.12-mingw.tar
-  - set SDL_TTF_PATH=%CD%\SDL2_ttf-2.0.12\i686-w64-mingw32\
+#  - choco install qt-sdk-windows-x64-mingw_opengl_seh
+#  - choco install Wget 7zip InnoSetup
+  - choco install InnoSetup
+#  - set QTDIR="C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\qt-5.3.2-x64-mingw491r1-seh-opengl"
+  # - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
+  # - set PATH=%PATH%;"C:\Program Files\7-Zip";
+  # - Wget https://www.libsdl.org/release/SDL2-devel-2.0.3-mingw.tar.gz --no-check-certificate
+  # - 7z x SDL2-devel-2.0.3-mingw.tar.gz
+  # - 7z x SDL2-devel-2.0.3-mingw.tar
+  # - set SDL_PATH=%CD%\SDL2-2.0.3\i686-w64-mingw32\
+  # - Wget https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-mingw.tar.gz --no-check-certificate
+  # - 7z x SDL2_image-devel-2.0.0-mingw.tar.gz
+  # - 7z x SDL2_image-devel-2.0.0-mingw.tar
+  # - set SDL_IMAGE_PATH=%CD%\SDL2_image-2.0.0\i686-w64-mingw32\
+  # - Wget https://www.libsdl.org/projects/SDL_ttf/release/SDL2_ttf-devel-2.0.12-mingw.tar.gz --no-check-certificate
+  # - 7z x SDL2_ttf-devel-2.0.12-mingw.tar.gz
+  # - 7z x SDL2_ttf-devel-2.0.12-mingw.tar
+  # - set SDL_TTF_PATH=%CD%\SDL2_ttf-2.0.12\i686-w64-mingw32\
 build_script:
-  - qmake QtTest.pro
-  - mingw32-make
+  - dir "C:\Program Files"
+  - dir "C:\Program Files (86)"
+  # - qmake QtTest.pro
+  # - mingw32-make
