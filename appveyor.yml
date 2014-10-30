@@ -11,6 +11,7 @@ build_script:
   - dir "C:\Program Files"
   - dir "C:\Program Files\7-Zip"
   - 7z x SDL2-devel-2.0.3-mingw.tar.gz
+  - 7z x SDL2-devel-2.0.3-mingw.tar
   - dir
   - dir C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
   - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
