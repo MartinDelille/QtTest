@@ -2,13 +2,14 @@ install:
 #  - choco install qt-sdk-windows-x64-mingw_opengl_seh
   - choco install Wget 7zip
   - set QTDIR="C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\qt-5.3.2-x64-mingw491r1-seh-opengl"
+# - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
+  - set PATH=%PATH%;"C:\Program Files\7-Zip";
 build_script:
   - Wget https://www.libsdl.org/release/SDL2-devel-2.0.3-mingw.tar.gz --no-check-certificate
   - dir
   - dir C:\
   - dir "C:\Program Files"
-  - dir C:\ProgramData
-  - dir C:\ProgramData\7zip
+  - dir "C:\Program Files\7-Zip"
   - 7zip SDL2-devel-2.0.3-mingw.tar.gz
   - dir
   - dir C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
