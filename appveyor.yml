@@ -18,7 +18,8 @@ install:
   # - 7z x SDL2_ttf-devel-2.0.12-mingw.tar
   # - set SDL_TTF_PATH=%CD%\SDL2_ttf-2.0.12\i686-w64-mingw32\
 build_script:
+  - dir "C:\"
   - dir "C:\Program Files"
-  - dir "C:\Program Files (86)"
+  - dir "C:\Program Files (x86)"
   # - qmake QtTest.pro
   # - mingw32-make
