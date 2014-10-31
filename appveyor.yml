@@ -1,21 +1,24 @@
-install:
-  - choco install qt-sdk-windows-x86-mingw_opengl
-  - dir c:\Qt
-  - dir C:\Qt\qt-5.3.2-x86-mingw491r1-opengl
-  #- choco install InnoSetup curl
-  - set QTDIR="C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\qt-5.3.2-x64-mingw491r1-seh-opengl"
-  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x86-mingw491r1-seh-opengl\mingw32\bin
-  - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
+#install:
+#  - choco install qt-sdk-windows-x86-mingw_opengl
+#  - dir c:\Qt
+#  - dir C:\Qt\qt-5.3.2-x86-mingw491r1-opengl
+#  - choco install InnoSetup curl
+#  - set QTDIR="C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\qt-5.3.2-x64-mingw491r1-seh-opengl"
+#  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x86-mingw491r1-seh-opengl\mingw32\bin
+#  - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 build_script:
+  - dir c:\
+  - dir c:\Qt
+
 #  - curl -L https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-mingw.tar.gz
-  - qmake QtTest.pro
-  - mingw32-make
-  - set QTTEST_RELEASE_PATH=%CD%
-  - dir
-  - cd debug
-  - dir
-  - iscc ../TravisSetup.iss
-  - dir
+#  - qmake QtTest.pro
+#  - mingw32-make
+#  - set QTTEST_RELEASE_PATH=%CD%
+#  - dir
+#  - cd debug
+#  - dir
+#  - iscc ../TravisSetup.iss
+#  - dir
 # deploy:
 #   provider: Environment
 #   name: production
