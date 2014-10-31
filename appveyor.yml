@@ -1,9 +1,11 @@
 install:
-  - choco install qt-sdk-windows-x64-mingw_opengl_seh
-  - choco install InnoSetup
+ - choco install qt-sdk-windows-x86-mingw_opengl
+  - dir c:\Qt
+  - dir "C:\Qt\qt-5.3.2-x86-mingw491r1-opengl"
+  #- choco install InnoSetup
   #- choco install curl
   - set QTDIR="C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\qt-5.3.2-x64-mingw491r1-seh-opengl"
-  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x64-mingw491r1-seh-opengl\mingw64\bin
+  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\qt-5.3.2-x86-mingw491r1-seh-opengl\mingw32\bin
   - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 build_script:
 #  - curl -L https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-mingw.tar.gz
@@ -13,7 +15,7 @@ build_script:
   - dir
   - cd debug
   - dir
-  - iscc TravisSetup.iss
+  - iscc ../TravisSetup.iss
   - dir
 # deploy:
 #   provider: Environment
