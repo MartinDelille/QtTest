@@ -1,3 +1,4 @@
+os: unstable
 #install:
 #  - choco install qt-sdk-windows-x86-mingw_opengl
 #  - dir c:\Qt
@@ -10,6 +11,7 @@ build_script:
   - dir c:\
   - dir c:\Tools
   - dir c:\Libraries
+  - dir c:\Libraries\Qt5.3.2
 
 #  - curl -L https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-mingw.tar.gz
 #  - qmake QtTest.pro
