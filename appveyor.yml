@@ -9,8 +9,7 @@ os: unstable
 #  - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 build_script:
   - dir c:\
-  - dir c:\Libraries
-  - dir c:\Libraries\Qt5.3.2
+  - dir c:\Qt\Qt5.3.2
 
 #  - curl -L https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-mingw.tar.gz
 #  - qmake QtTest.pro
