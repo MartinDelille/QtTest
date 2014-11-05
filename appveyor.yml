@@ -4,14 +4,15 @@ install:
 #  - dir c:\Qt
 #  - dir C:\Qt\qt-5.3.2-x86-mingw491r1-opengl
   - choco install InnoSetup curl
-  - set QTDIR="C:\Qt\Qt5.3.2\5.3\msvc2013_opengl"
+  - set QTDIR="C:\Qt\Qt5.3.2\5.3\mingw482_32"
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 build_script:
   - dir c:\
   - dir c:\MinGW
   - dir c:\Qt\Qt5.3.2
-  - dir c:\Qt\Qt5.3.2\5.3
+  - dir c:\Qt\Qt5.3.2\5.3\
+  - dir c:\Qt\Qt5.3.2\5.3\mingw482_32
 
 #  - curl -L https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-mingw.tar.gz
   - qmake QtTest.pro
