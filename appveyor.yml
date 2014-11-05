@@ -21,7 +21,7 @@ build_script:
   - dir
   - iscc ../TravisSetup.iss
   - dir
-  - dir ...
+  - dir ..
 # deploy:
 #   provider: Environment
 #   name: production
