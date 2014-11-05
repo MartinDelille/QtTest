@@ -16,11 +16,12 @@ build_script:
   - mingw32-make
   - dir
   - dir debug
-#  - set QTTEST_RELEASE_PATH=%CD%
-#  - cd debug
-#  - dir
-#  - iscc ../TravisSetup.iss
-#  - dir
+  - set QTTEST_RELEASE_PATH=%CD%
+  - cd debug
+  - dir
+  - iscc ../TravisSetup.iss
+  - dir
+  - dir ...
 # deploy:
 #   provider: Environment
 #   name: production
