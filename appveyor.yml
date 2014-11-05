@@ -1,8 +1,5 @@
 os: unstable
 install:
-#  - choco install qt-sdk-windows-x86-mingw_opengl
-#  - dir c:\Qt
-#  - dir C:\Qt\qt-5.3.2-x86-mingw491r1-opengl
   - choco install InnoSetup curl
   - set QTDIR="C:\Qt\Qt5.3.2\5.3\mingw482_32"
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
@@ -18,6 +15,7 @@ build_script:
   - qmake QtTest.pro
   - mingw32-make
   - dir
+  - dir debug
 #  - set QTTEST_RELEASE_PATH=%CD%
 #  - cd debug
 #  - dir
