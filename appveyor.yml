@@ -11,6 +11,7 @@ build_script:
   - dir c:\
   - dir c:\MinGW
   - dir c:\Qt\Qt5.3.2
+  - dir c:\Qt\Qt5.3.2\5.3
 
 #  - curl -L https://www.libsdl.org/projects/SDL_image/release/SDL2_image-devel-2.0.0-mingw.tar.gz
   - qmake QtTest.pro
