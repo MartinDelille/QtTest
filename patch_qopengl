@@ -1,0 +1,10 @@
+--- C:/Users/Martin/Desktop/qopengl2.h	Thu Nov 06 11:33:08 2014
++++ C:/Users/Martin/Desktop/qopengl3.h	Thu Nov 06 11:36:41 2014
+@@ -49,6 +49,7 @@
+ // Windows always needs this to ensure that APIENTRY gets defined
+ #if defined(Q_OS_WIN)
+ # include <QtCore/qt_windows.h>
++# undef MemoryBarrier
+ #endif
+  
+ // Note: Mac OSX is a "controlled platform" for OpenGL ABI so we
