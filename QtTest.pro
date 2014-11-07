@@ -25,6 +25,7 @@ QMAKE_POST_LINK += echo "i m a linux";
 
 mac {
 QMAKE_POST_LINK += echo "i m a mac";
+QMAKE_MAC_SDK = macosx10.9
 }
 
 win32 {
