@@ -10,11 +10,9 @@ build_script:
   - dir
   - dir release
   - set QTTEST_RELEASE_PATH=%CD%
-  - cd release
   - dir
-  - iscc ../TravisSetup.iss
+  - iscc TravisSetup.iss
   - dir
-  - dir ..
 #deploy:
 #  provider: Environment
 #  name: production
