@@ -12,10 +12,7 @@
 #error "Unable to find MyAppSrc"
 #endif
 
-#define FileVerStr GetFileVersion(MyAppSrc)
-#define StripBuild(str VerStr) Copy(VerStr, 1, RPos(".", VerStr)-1)
-#define MyAppVerStr StripBuild(FileVerStr)
-#define MyAppVerName MyAppName + " v" + MyAppVerStr
+#define MyAppVerName MyAppName + " v" + MyAppVersion
 
 #define MyOutputDir GetEnv('QTTEST_RELEASE_PATH')
 #define QtPath GetEnv('QTDIR')
@@ -38,7 +35,7 @@ DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 LicenseFile="LICENSE.TXT"
 OutputDir={#MyOutputDir}
-OutputBaseFilename={#MyAppName}Setup_v{#MyAppVerStr}
+OutputBaseFilename={#MyAppName}Setup_v{#MyAppVersion}
 ;OutputBaseFilename={#MyAppName}Setup.exe
 Compression=lzma
 SolidCompression=yes
