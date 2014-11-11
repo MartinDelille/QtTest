@@ -8,16 +8,16 @@ build_script:
   - qmake QtTest.pro
   - mingw32-make
   - dir
-  - dir debug
+  - dir release
   - set QTTEST_RELEASE_PATH=%CD%
-  - cd debug
+  - cd release
   - dir
   - iscc ../TravisSetup.iss
   - dir
   - dir ..
-deploy:
-  provider: Environment
-  name: production
-  on:
-    branch: appveyor
+#deploy:
+#  provider: Environment
+#  name: production
+#  on:
+#    branch: appveyor
 #    appveyor_repo_tag: true
