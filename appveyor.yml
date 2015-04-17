@@ -7,6 +7,7 @@ install:
 build_script:
   - echo %PATH%
   - qmake QtTest.pro
+  - type Makefile.Release
   - mingw32-make
   - dir
   - dir release
