@@ -21,7 +21,7 @@ deploy:
     secure: 9bMCGL2D0e/GK3MGOJu7Ma1hNb6sxAOyEftuonF/tV31LoLLM77+hitI6T3snyCM
   artifact: test.txt
   draft: false
-   prerelease: false
+  prerelease: false
   on:
     branch: appveyor
     appveyor_repo_tag: true
