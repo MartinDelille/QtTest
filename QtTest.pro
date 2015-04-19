@@ -19,18 +19,18 @@ FORMS    += QtTestWindow.ui
 
 message("coucou c'est nous!")
 
-linux {
-QMAKE_POST_LINK += echo "i m a linux";
-}
+#linux {
+#QMAKE_POST_LINK += echo "i m a linux";
+#}
 
-mac {
-QMAKE_POST_LINK += echo "i m a mac";
-QMAKE_MAC_SDK = macosx10.9
-}
+#mac {
+#QMAKE_POST_LINK += echo "i m a mac";
+#QMAKE_MAC_SDK = macosx10.9
+#}
 
-win32 {
-QMAKE_POST_LINK += echo "i m a windows" &&
-}
+#win32 {
+#QMAKE_POST_LINK += echo "i m a windows" &&
+#}
 
-QMAKE_POST_LINK += echo "$$QT_MAJOR_VERSION $$QT_MINOR_VERSION"
-QMAKE_POST_LINK += echo $$(PATH)
+#QMAKE_POST_LINK += echo "$$QT_MAJOR_VERSION $$QT_MINOR_VERSION"
+#QMAKE_POST_LINK += echo $$(PATH)
