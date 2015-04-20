@@ -15,8 +15,8 @@ build_script:
   - set QTTEST_RELEASE_PATH=%CD%
   - dir
   - dir release
- - iscc TravisSetup.iss
- - dir
+  - iscc TravisSetup.iss
+  - dir
 deploy:
   release: test.txt
   provider: GitHub
