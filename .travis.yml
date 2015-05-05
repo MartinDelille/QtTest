@@ -3,6 +3,7 @@ env:
   - PATH=$PATH:/usr/local/opt/qt5/bin
 before_script:
 - brew update
+- brew upgrade
 - brew install qt5
 script:
 - cat /usr/local/include/boost/version.hpp
