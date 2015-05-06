@@ -15,3 +15,8 @@ notifications:
   email: false
   irc:
     channels: phonations.com#joker
+    template:
+       - "Repository: %{repository}"
+       - "Commit: %{commit}"
+       - "Message: %{message}"
+       - "Build details: %{build_url}"
