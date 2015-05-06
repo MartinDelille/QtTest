@@ -13,3 +13,5 @@ notifications:
   flowdock:
     secure: NLEntzrq62J7GBG9I0VpByNGjGwH7OG1LA5Z4lSb2GQtLaWzSy7A2P/NbGesUs1JAMc/u6iTv0Cnsg2lhCQcg7kyin3N0cdwU6e/OtrpkOFQFCwSTUAJVomlSATB9JWPAzq8PFFiRoxordUiVIw6enbvTNNVvlgX/BMLz0X752w=
   email: false
+  irc:
+    channels: phonations.com#joker
