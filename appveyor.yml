@@ -3,4 +3,4 @@ branches:
   only:
     - appveyor
 build_script:
-  - dir
+  - date.bat
