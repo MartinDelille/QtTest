@@ -1,11 +1,21 @@
 #include "QtTestWindow.h"
 #include <QApplication>
 
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/xml_parser.hpp>
+
 int main(int argc, char *argv[])
 {
-	QApplication a(argc, argv);
-	QtTestWindow w;
-	w.show();
+	boost::property_tree::ptree pt;
 
-	return a.exec();
+	pt.put("test", "coucou");
+
+	std::ofstream file("test.xml");
+
+	boost::property_tree::xml_writer_settings<std::string> settings = boost::property_tree::xml_writer_make_settings<std::string>('\t', 1);
+	boost::property_tree::write_xml(file, pt, settings);
+
+	file.close();
+
+	return 0;
 }

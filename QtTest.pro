@@ -17,6 +17,8 @@ HEADERS  += QtTestWindow.h
 
 FORMS    += QtTestWindow.ui
 
+INCLUDEPATH += /usr/local/include
+
 message("coucou c'est nous!")
 
 #linux {
