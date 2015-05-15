@@ -17,7 +17,16 @@ HEADERS  += QtTestWindow.h
 
 FORMS    += QtTestWindow.ui
 
+unix {
 INCLUDEPATH += /usr/local/include
+}
+win32 {
+    !exists($$(BOOST_PATH)) {
+        error("You must define BOOST_PATH")
+    }
+
+    INCLUDEPATH += $$(BOOST_PATH)
+}
 
 message("coucou c'est nous!")
 
