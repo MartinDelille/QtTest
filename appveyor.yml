@@ -1,6 +1,6 @@
 os: unstable
-branches:
-  only:
-    - appveyor
 build_script:
-  - dir
+  - dir C:\
+  - dir C:\Libraries
+  - dir C:\Libraries\boost
+  - dir C:\Libraries\boost\property_tree
