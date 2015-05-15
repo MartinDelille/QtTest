@@ -6,6 +6,7 @@ install:
   - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
   - set BOOST_PATH="C:\Libraries\boost"
 build_script:
+  - dir %BOOST_PATH%
   - dir %QTDIR%
   #- echo %PATH%
   - qmake QtTest.pro
