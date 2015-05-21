@@ -1,22 +1,21 @@
 os: unstable
 install:
-  - choco install InnoSetup
-  - set QTDIR="C:\Qt\Qt5.3.2\5.3\mingw482_32"
-  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
-  - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
+  #  - choco install InnoSetup
+  #- set QTDIR="C:\Qt\Qt5.3.2\5.3\mingw482_32"
+  #- set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+  #- set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 build_script:
   - dir %QTDIR%
   #- echo %PATH%
-  - qmake QtTest.pro
-  - type Makefile.Release
-  - mingw32-make
-  - dir
-  - dir release
-  - set QTTEST_RELEASE_PATH=%CD%
-  - dir
-  - dir release
-  - iscc TravisSetup.iss
-  - dir
+  #  - qmake QtTest.pro
+  #- mingw32-make
+  #  - dir
+  #  - dir release
+  #  - set QTTEST_RELEASE_PATH=%CD%
+  #  - dir
+  #  - dir release
+  #  - iscc TravisSetup.iss
+  #  - dir
 deploy:
   release: test.txt
   provider: GitHub
@@ -26,5 +25,6 @@ deploy:
   draft: false
   prerelease: false
   on:
-    branch: appveyor
+    branch: av/deploy
     appveyor_repo_tag: true
+
