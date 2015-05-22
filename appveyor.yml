@@ -26,5 +26,5 @@ deploy:
   prerelease: false
   on:
     branch: av/deploy
-    appveyor_repo_tag: false
+    appveyor_repo_tag: true
 
