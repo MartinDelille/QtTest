@@ -22,7 +22,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: 9bMCGL2D0e/GK3MGOJu7Ma1hNb6sxAOyEftuonF/tV31LoLLM77+hitI6T3snyCM
-  artifact: pouet2.txt
+  artifact: test.txt
   draft: false
   prerelease: false
   on:
