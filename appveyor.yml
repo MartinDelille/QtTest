@@ -16,7 +16,7 @@ build_script:
   #  - dir
   #  - dir release
   #  - iscc TravisSetup.iss
-  #  - dir
+  - dir
 deploy:
   release: test.txt
   provider: GitHub
