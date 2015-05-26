@@ -25,7 +25,7 @@ deploy:
   auth_token:
     secure: 9bMCGL2D0e/GK3MGOJu7Ma1hNb6sxAOyEftuonF/tV31LoLLM77+hitI6T3snyCM
   artifacts:
-  - artifact.txt
+  - path: artifact.txt
   draft: false
   prerelease: false
   on:
