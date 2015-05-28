@@ -23,14 +23,13 @@ build_script:
   - dir
   - type artifact_%CURRENT_DATE%.txt
 artifacts:
-  - path: artifact_%CURRENT_DATE%.txt
+  - path: artifact_15.05.28.txt
     name: MyArtifact
 deploy:
-  #  release: test.txt
   provider: GitHub
   auth_token:
     secure: 9bMCGL2D0e/GK3MGOJu7Ma1hNb6sxAOyEftuonF/tV31LoLLM77+hitI6T3snyCM
-  artifact: MyArtifact
+  artifact: artifact_15.05.28.txt
   draft: false
   prerelease: true
   on:
