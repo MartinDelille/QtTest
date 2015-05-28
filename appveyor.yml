@@ -4,9 +4,9 @@ install:
   #- set QTDIR="C:\Qt\Qt5.3.2\5.3\mingw482_32"
   #- set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   #- set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
+  - set CURRENT_DATE=(date.bat)
 build_script:
-  - dir %QTDIR%
-  - echo %appveyor_build_version%
+  - echo %CURRENT_DATE%
   #- echo %PATH%
   #  - qmake QtTest.pro
   #- mingw32-make
