@@ -34,6 +34,3 @@ deploy:
   prerelease: true
   on:
     branch: av/deploy
-
-
-constance@dmiassociates.com
