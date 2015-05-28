@@ -30,10 +30,10 @@ deploy:
   provider: GitHub
   auth_token:
     secure: 9bMCGL2D0e/GK3MGOJu7Ma1hNb6sxAOyEftuonF/tV31LoLLM77+hitI6T3snyCM
-  artifact: artifact_15.05.28.txt
+  artifact: MyArtifact
   draft: false
   prerelease: true
   on:
     branch: av/deploy
-    appveyor_repo_tag: true
+
 
