@@ -19,18 +19,18 @@ build_script:
   #  - dir
   #  - dir release
   #  - iscc TravisSetup.iss
-  - git rev-parse HEAD >> artifact.txt
-  - type artifact.txt
+  - git rev-parse HEAD >> artifact_%CURRENT_DATE%.txt
   - dir
+  - type artifact_%CURRENT_DATE%.txt
 artifacts:
-  - path: artifact.txt
+  - path: artifact_%CURRENT_DATE%.txt
     name: MyArtifact
 deploy:
   #  release: test.txt
   provider: GitHub
   auth_token:
     secure: 9bMCGL2D0e/GK3MGOJu7Ma1hNb6sxAOyEftuonF/tV31LoLLM77+hitI6T3snyCM
-  artifact: artifact.txt
+  artifact: artifact_*.txt
   draft: false
   prerelease: true
   on:
