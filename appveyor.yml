@@ -23,7 +23,7 @@ build_script:
   - dir
   - type artifact_%CURRENT_DATE%.txt
 artifacts:
-  - path: artifact_15.05.28.txt
+  - path: artifact_*.txt
     name: MyArtifact
 deploy:
   provider: GitHub
