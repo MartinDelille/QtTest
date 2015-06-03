@@ -49,7 +49,7 @@ Name: "french"; MessagesFile: "compiler:Languages\French.isl"
 
 [Files]
 Source: "C:\Qt\Qt5.3.2\5.3\mingw482_32\bin\Qt5Core.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "{#QtDir}\bin\Qt5Gui.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: {#QtDir}"\bin\Qt5Gui.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#QtDir}\bin\Qt5OpenGL.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#QtDir}\bin\Qt5Network.dll"; DestDir: "{app}"; Flags: ignoreversion
 Source: "{#QtDir}\bin\Qt5SerialPort.dll"; DestDir: "{app}"; Flags: ignoreversion
