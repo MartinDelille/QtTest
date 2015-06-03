@@ -1,36 +1,27 @@
 os: unstable
 install:
   - choco install InnoSetup
-  #- set QTDIR="C:\Qt\Qt5.3.2\5.3\mingw482_32"
-  #- set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+  - set QTDIR="C:\Qt\Qt5.3.2\5.3\mingw482_32"
+  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 build_script:
-  #  - for /f "delims=" %a in ('date.bat') do @set CURRENT_DATE=%a
-  - date.bat > date.tmp
-  - set /p CURRENT_DATE=<date.tmp
-  - del date.tmp
-  - echo %CURRENT_DATE%
-  #- echo %PATH%
-  #  - qmake QtTest.pro
-  #- mingw32-make
-  #  - dir
-  #  - dir release
-  #  - set QTTEST_RELEASE_PATH=%CD%
-  #  - dir
-  #  - dir release
-  #  - iscc TravisSetup.iss
-  - git rev-parse HEAD >> artifact_%CURRENT_DATE%.txt
+  - qmake QtTest.pro
+  - mingw32-make
   - dir
-  - type artifact_%CURRENT_DATE%.txt
-  - iscc
+  - dir release
+  - set QTTEST_RELEASE_PATH=%CD%
+  - dir
+  - dir release
+  - iscc TravisSetup.iss
+  - dir
 artifacts:
-  - path: artifact_*.txt
+  - path: QtTest_v*.txt
     name: MyArtifact
 deploy:
   provider: GitHub
   auth_token:
     secure: 9bMCGL2D0e/GK3MGOJu7Ma1hNb6sxAOyEftuonF/tV31LoLLM77+hitI6T3snyCM
-  artifact: /artifact_[0-9]+\.[0-9]+\.[0-9]+\.txt/
+  artifact: /QtTest_v[0-9]+\.[0-9]+\.[0-9]+\.txt/
   draft: false
   prerelease: false
   on:

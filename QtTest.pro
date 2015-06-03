@@ -9,6 +9,7 @@ QT       += core gui widgets
 TARGET = QtTest
 TEMPLATE = app
 
+VERSION = 1.0.0
 
 SOURCES += main.cpp\
         QtTestWindow.cpp
