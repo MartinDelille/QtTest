@@ -15,7 +15,7 @@
 #define MyAppVerName MyAppName + " v" + MyAppVersion
 
 #define MyOutputDir GetEnv('QTTEST_RELEASE_PATH')
-#define QtPath GetEnv('QTDIR')
+#define QtDir GetEnv('QTDIR')
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
