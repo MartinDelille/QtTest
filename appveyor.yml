@@ -1,0 +1,6 @@
+os: unstable
+branches:
+  only:
+    - av/*
+build_script:
+  - echo "doing nothing here"
