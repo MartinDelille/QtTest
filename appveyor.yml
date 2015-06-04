@@ -6,6 +6,7 @@ install:
   - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
   - set QTTEST_RELEASE_PATH=%CD%
 build_script:
+  - dir C:\Qt
   - qmake QtTest.pro
   - type Makefile.Release
   - mingw32-make
