@@ -8,5 +8,9 @@ int main(int argc, char *argv[])
 	QtTestWindow w;
 	w.show();
 
+	int b;
+
+	int c = b + 3;
+
 	return a.exec();
 }
