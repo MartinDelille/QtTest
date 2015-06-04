@@ -1,7 +1,6 @@
 os: unstable
+branches:
+  only:
+    - av/*
 build_script:
-  - dir C:\
-  - dir C:\Libraries
-  - dir C:\Libraries\boost
-  - dir C:\Libraries\boost\boost
-  - dir C:\Libraries\boost\boost\property_tree
+  - echo "doing nothing here"
