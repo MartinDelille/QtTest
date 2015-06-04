@@ -18,7 +18,7 @@ HEADERS  += QtTestWindow.h
 
 FORMS    += QtTestWindow.ui
 
-message("coucou c'est nous!")
+OTHER_FILES += QtTest.iss
 
 #linux {
 #QMAKE_POST_LINK += echo "i m a linux";
@@ -35,3 +35,13 @@ message("coucou c'est nous!")
 
 #QMAKE_POST_LINK += echo "$$QT_MAJOR_VERSION $$QT_MINOR_VERSION"
 #QMAKE_POST_LINK += echo $$(PATH)
+
+CONFIG(release, debug|release) {
+	win32 {
+		QMAKE_POST_LINK += windeployqt release &
+
+		QMAKE_POST_LINK += echo "====== Deploying $${_PRO_FILE_PWD_}/$${TARGET}.iss ======" &
+		QMAKE_POST_LINK += $${QMAKE_COPY} $$shell_path($${_PRO_FILE_PWD_}/$${TARGET}.iss) . &
+		QMAKE_POST_LINK += iscc $${TARGET}.iss &
+	}
+}
