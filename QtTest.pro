@@ -34,7 +34,11 @@ OTHER_FILES += QtTest.iss
 #}
 
 #QMAKE_POST_LINK += echo "$$QT_MAJOR_VERSION $$QT_MINOR_VERSION"
-#QMAKE_POST_LINK += echo $$(PATH)
+QMAKE_POST_LINK += echo $$(PATH) &
+QMAKE_POST_LINK += echo $$(QTTEST_RELEASE_PATH) &
+
+
+
 
 #CONFIG(release, debug|release) {
 #	win32 {
