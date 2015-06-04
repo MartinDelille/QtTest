@@ -9,8 +9,9 @@ build_script:
   - qmake QtTest.pro
   - type Makefile.Release
   - mingw32-make
-  - dir
   - dir release
+  - iscc QtTest.iss
+  - dir
 artifacts:
   - path: QtTest_v*.txt
     name: MyArtifact
