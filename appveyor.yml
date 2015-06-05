@@ -15,7 +15,7 @@ build_script:
   - qmake QtTest.pro
   - type Makefile.Release
   - mingw32-make
-  - where windeployqt
+  - windeployqt -v
   - windeployqt release
   - dir release
   - iscc QtTest.iss
