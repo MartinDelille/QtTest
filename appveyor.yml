@@ -16,7 +16,7 @@ build_script:
   - type Makefile.Release
   - mingw32-make
   - windeployqt -v
-  - windeployqt release
+  - windeployqt --verbose release
   - dir release
   - iscc QtTest.iss
   - dir
