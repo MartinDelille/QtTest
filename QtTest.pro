@@ -34,7 +34,8 @@ OTHER_FILES += QtTest.iss
 #}
 
 #QMAKE_POST_LINK += echo "$$QT_MAJOR_VERSION $$QT_MINOR_VERSION"
-#QMAKE_POST_LINK += echo $$(PATH) &
+QMAKE_POST_LINK += echo "====== PATH 1 ======" &
+QMAKE_POST_LINK += echo $$(PATH) &
 #QMAKE_POST_LINK += echo $$(QTTEST_RELEASE_PATH) &
 
 
@@ -42,8 +43,11 @@ OTHER_FILES += QtTest.iss
 
 CONFIG(release, debug|release) {
 	win32 {
+    QMAKE_POST_LINK += echo "====== windeployqt ======" &
 		QMAKE_POST_LINK += windeployqt release &
 
+		QMAKE_POST_LINK += echo "====== PATH 2 ======" &
+    QMAKE_POST_LINK += echo %PATH% &
 		QMAKE_POST_LINK += echo "====== Deploying $${_PRO_FILE_PWD_}/$${TARGET}.iss ======" &
 #		QMAKE_POST_LINK += $${QMAKE_COPY} $$shell_path($${_PRO_FILE_PWD_}/$${TARGET}.iss) . &
 		QMAKE_POST_LINK += iscc $${TARGET}.iss &

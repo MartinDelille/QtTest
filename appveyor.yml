@@ -11,10 +11,10 @@ build_script:
   - dir C:\Qt
   - dir C:\Qt\5.4
   - dir %QTDIR%\bin
+  - echo %PATH%
   - qmake QtTest.pro
   - type Makefile.Release
   - mingw32-make
-  - echo %PATH%
 #  - windeployqt --verbose 3 release/QtTest.exe
   - dir release
 #  - iscc QtTest.iss
