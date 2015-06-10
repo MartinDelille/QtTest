@@ -15,9 +15,9 @@ build_script:
   - type Makefile.Release
   - mingw32-make
   - echo %PATH%
-  - windeployqt --verbose 3 release/QtTest.exe
+#  - windeployqt --verbose 3 release/QtTest.exe
   - dir release
-  - iscc QtTest.iss
+#  - iscc QtTest.iss
   - dir
 artifacts:
   - path: QtTest_v*.txt
