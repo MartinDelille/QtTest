@@ -1,4 +1,4 @@
-language: objective-c
+os: osx
 before_script:
 # - brew update > /dev/null
 # - brew install qt5
@@ -7,10 +7,10 @@ before_script:
 # - pyenv install 2.7.6
 # - pyenv global 2.7.6
 # - pyenv rehash
-# - pip install cpp-coveralls
+ - pip install cpp-coveralls
 # - pyenv rehash
 #- sudo easyinstall pip
-- sudo pip install cpp-coveralls
+#- sudo pip install cpp-coveralls
 # - export PATH=$PATH:/usr/local/opt/qt5/bin
 script:
 # - qmake QtTest.pro
