@@ -16,5 +16,9 @@ int main(int argc, char *argv[])
 
 	c = e + b;
 
+	int f;
+
+	c = e + f;
+
 	return a.exec();
 }
