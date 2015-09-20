@@ -11,8 +11,8 @@ before_script:
 #- brew update > /dev/null
 - brew install qt5
 script:
-#- qmake QtTest.pro
-#- make
+- qmake QtTest.pro
+- make
 - echo "pouet"
 addons:
   coverity_scan:
@@ -21,6 +21,6 @@ addons:
       description: Build submitted via Travis CI
     notification_email: martin@phonations.com
     build_command_prepend: cov-configure --comptype clangcxx --compiler clang++ --template
-    build_command_prepend: qmake QtTest.pro
-    build_command: make -j 4
+#    build_command_prepend: qmake QtTest.pro
+#    build_command: make -j 4
     branch_pattern: coverity

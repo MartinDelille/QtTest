@@ -12,5 +12,9 @@ int main(int argc, char *argv[])
 
 	int c = b + 3;
 
+	int e;
+
+	c = e + b;
+
 	return a.exec();
 }
