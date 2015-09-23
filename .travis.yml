@@ -12,5 +12,5 @@ install:
 - ./install_qt5.sh
 script:
 - qtchooser -list-versions
-- qmake QtTest.pro
+- qmake -qt=qt5 QtTest.pro
 - make
