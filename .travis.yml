@@ -1,16 +1,18 @@
 os:
 - linux
-- osx
+#- osx
 branches:
   except:
     - av/*
 env:
-  - PATH=$PATH:/usr/local/opt/qt5/bin
+  global:
+    - PATH=$PATH:/usr/local/opt/qt5/bin
 install:
 - echo $TRAVIS_OS_NAME
 - ./install_qt5.sh
 script:
-- qtchooser -list-versions
-- qmake -qt=qt5 -v
+- qmake -v
+- qmake -qt=qt5
+- qmake -v
 - qmake -qt=qt5 QtTest.pro
 - make
