@@ -10,6 +10,6 @@ install:
 - echo $TRAVIS_OS_NAME
 - ./install_qt5.sh
 script:
-    - qtchooser -list-versions
+- qtchooser -list-versions
 - qmake QtTest.pro
 - make
