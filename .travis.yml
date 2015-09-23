@@ -2,11 +2,13 @@ os: osx
 branches:
   except:
     - av/*
-env:
-  - PATH=$PATH:/usr/local/opt/qt5/bin
+#env:
+#  - PATH=$PATH:/usr/local/opt/qt5/bin
 before_script:
-- brew update > /dev/null
-- brew install qt5
+#- brew update > /dev/null
+#- brew install qt5
+- brew install uncrustify
 script:
-- qmake QtTest.pro
-- make
+#- qmake QtTest.pro
+#- make
+- ./uncrustify.sh
