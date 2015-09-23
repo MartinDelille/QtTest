@@ -11,6 +11,8 @@ install:
 - echo $TRAVIS_OS_NAME
 - ./install_qt5.sh
 script:
+- ls -l /usr/include/qt5/QtCore
 - qmake -v
 - qmake QtTest.pro
+- cat Makefile
 - make
