@@ -3,6 +3,7 @@
 echo "Install Qt5"
 if [ "$(uname)" == "Darwin" ]; then
 brew install qt5
+brew link --force qt5
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
 echo "Linux detected"
