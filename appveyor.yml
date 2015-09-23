@@ -1,6 +1,6 @@
 os: unstable
 branches:
   only:
-    - appveyor
+    - av/*
 build_script:
-  - dir
+  - echo "doing nothing here"
