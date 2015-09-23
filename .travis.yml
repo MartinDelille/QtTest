@@ -6,13 +6,11 @@ branches:
     - av/*
 env:
   global:
-    - PATH=$PATH:/usr/local/opt/qt5/bin
+    - PATH=/usr/lib/x86_64-linux-gnu/qt5/bin:/usr/local/opt/qt5/bin:$PATH
 install:
 - echo $TRAVIS_OS_NAME
 - ./install_qt5.sh
 script:
 - qmake -v
-- qmake -qt=qt5
-- qmake -v
-- qmake -qt=qt5 QtTest.pro
+- qmake QtTest.pro
 - make
