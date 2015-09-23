@@ -1,5 +1,6 @@
 #include "QtTestWindow.h"
 #include <QApplication>
+#include <QMath>
 
 int main(int argc, char *argv[])
 {
