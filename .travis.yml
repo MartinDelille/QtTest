@@ -1,12 +1,11 @@
 os:
 - linux
-#- osx
+- osx
 branches:
   except:
     - av/*
 env:
   - PATH=$PATH:/usr/local/opt/qt5/bin
-  - QT_SELECT:qt5
 install:
 - echo $TRAVIS_OS_NAME
 - ./install_qt5.sh
