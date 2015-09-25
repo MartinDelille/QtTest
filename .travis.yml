@@ -26,7 +26,7 @@ before_install:
 
 install:
   - export SHORT_VER=`echo $QTVER | cut -b1-2`
-  - if [[ "$TRAVIS_OS_NAME" != linux ]]; then sudo apt-get -qy install qt${SHORT_VER}base qt${SHORT_VER}xmlpatterns; fi
+  - if [[ "$TRAVIS_OS_NAME" == linux ]]; then sudo apt-get -qy install qt${SHORT_VER}base qt${SHORT_VER}xmlpatterns; fi
   - if [[ "$TRAVIS_OS_NAME" == osx && $QTVER != 521 ]]; then brew install qt5; fi
   - if [[ "$TRAVIS_OS_NAME" == osx && $QTVER == 521 ]]; then brew install homebrew/versions/qt52; fi
   - if [[ "$TRAVIS_OS_NAME" == osx && $QTVER != 521 ]]; then brew link --force qt5; fi
