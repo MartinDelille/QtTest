@@ -33,6 +33,8 @@ install:
   - export SHORT_VER=`echo $QTVER | cut -b1-2`
   - '[[ "$TRAVIS_OS_NAME" != linux || $QTVER == ust ]] || sudo apt-get -qy install qt${SHORT_VER}base qt${SHORT_VER}xmlpatterns'
   - '[[ "$TRAVIS_OS_NAME" != linux || $QTVER != ust ]] || sudo apt-get -qy install qt5-qmake qtbase5-dev libqt5xmlpatterns5-dev'
+  - '[[ "$TRAVIS_OS_NAME" != osx   || $QTVER == 521 ]] || brew install qt5'
+  - '[[ "$TRAVIS_OS_NAME" != osx   || $QTVER != 521 ]] || brew install homebrew/versions/qt52'
   - '[[ "$TRAVIS_OS_NAME" != osx   || $QTVER == 521 ]] || brew link --force qt5'
   - '[[ "$TRAVIS_OS_NAME" != osx   || $QTVER != 521 ]] || brew link --force homebrew/versions/qt52'
 
