@@ -33,6 +33,7 @@ install:
 before_script:
   - if [[ "$TRAVIS_OS_NAME" == linux ]]; then export QMAKESPEC=linux-clang; fi
   - if [[ "$TRAVIS_OS_NAME" == osx   ]]; then export QMAKESPEC=macx-clang;  fi
+  - ls -l /opt/qt*
   - if [[ "$TRAVIS_OS_NAME" == linux ]]; then . /opt/qt$SHORT_VER/bin/qt$SHORT_VER-env.sh; fi
   - qmake -v
   - qmake -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release QtTest.pro
