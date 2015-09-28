@@ -20,6 +20,14 @@ matrix:
     - { os: osx, env: QTVER=511 }
     - { os: osx, env: QTVER=541 }
 
+addons:
+  apt:
+    sources:
+    - beineri/opt-qt532
+    packages:
+    - qt53base
+    - qt53xmlpatterns
+
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == osx && $QTVER != 532 ]]; then brew update; fi
 
@@ -46,11 +54,3 @@ script:
 notifications:
   email:
     on_success: always
-
-addons:
-  apt:
-    sources:
-    - beineri/opt-qt$QTVER
-    packages:
-    - qt53base
-    - qt53xmlpatterns
