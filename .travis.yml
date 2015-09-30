@@ -3,6 +3,9 @@ language: cpp
 os:
   - linux
 
+install:
+  - sudo apt-get install libasound2-dev
+
 script:
   - g++ -Wall -D__LINUX_ALSA__ -o midiprobe main.cpp rtmidi/RtMidi.cpp -lasound -lpthread
   - ./midiprobe
