@@ -3,16 +3,9 @@ language: cpp
 os:
   - linux
 
-compiler:
-  - clang
-
-
-install:
-  - cd rtmidi
-  - sudo apt-get -qy install autoconf libtool
-  - libtoolize
-  - automake --add-missing
-  - autoconf
+script:
+  - g++ -Wall -D__LINUX_ALSA__ -o midiprobe main.cpp rtmidi/RtMidi.cpp -lasound -lpthread
+  - ./midiprobe
 
 notifications:
   email:
