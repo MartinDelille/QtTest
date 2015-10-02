@@ -49,7 +49,7 @@ before_script:
   - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER == ust ]]; then export QMAKE_VER=-qt=qt5; fi
   - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER == 502 ]]; then export SHORT_VER=5; fi
   - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER != ust ]]; then . /opt/qt$SHORT_VER/bin/qt$SHORT_VER-env.sh; fi
-  - qmake -v
+  - qmake $QMAKE_VER -v
   - qmake $QMAKE_VER -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release QtTest.pro
 
 script:
