@@ -10,12 +10,12 @@ compiler:
 
 env:
   - QTVER=ust # Ubuntu SDK Team (Qt 5.x).
-  - QTVER=502 # Ubuntu only
-  - QTVER=511 # Ubuntu only.
-  - QTVER=521 # OSX and Ubuntu.
-  - QTVER=532 # OSX and Ubuntu.
-  - QTVER=541 # Ubuntu only.
-  - QTVER=55  # OSX and Ubuntu.
+#  - QTVER=502 # Ubuntu only
+#  - QTVER=511 # Ubuntu only.
+#  - QTVER=521 # OSX and Ubuntu.
+#  - QTVER=532 # OSX and Ubuntu.
+#  - QTVER=541 # Ubuntu only.
+#  - QTVER=55  # OSX and Ubuntu.
 
 matrix:
   exclude:
