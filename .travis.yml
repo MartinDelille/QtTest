@@ -6,8 +6,11 @@ os:
 
 compiler:
   - clang
+  - gcc
 
 env:
+  - QTVER=ust # Ubuntu SDK Team (Qt 5.x).
+  - QTVER=502 # Ubuntu only
   - QTVER=511 # Ubuntu only.
   - QTVER=521 # OSX and Ubuntu.
   - QTVER=532 # OSX and Ubuntu.
@@ -16,28 +19,38 @@ env:
 
 matrix:
   exclude:
+    - { os: osx, env: QTVER=ust }
+    - { os: osx, env: QTVER=502 }
     - { os: osx, env: QTVER=511 }
     - { os: osx, env: QTVER=541 }
+    - { compiler: clang, env: QTVER=ust } # QTBUG-32100
+    - { compiler: clang, env: QTVER=502 } # QTBUG-32100
 
 before_install:
-  - if [[ "$TRAVIS_OS_NAME" == linux ]]; then sudo add-apt-repository -y ppa:beineri/opt-qt$QTVER; fi
+  - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER == ust ]]; then sudo add-apt-repository -y ppa:upbuntu-sdk-team/ppa; fi
+  - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER != ust ]]; then sudo add-apt-repository -y ppa:beineri/opt-qt$QTVER; fi
   - if [[ "$TRAVIS_OS_NAME" == linux ]]; then sudo apt-get -qy update; fi
   - if [[ "$TRAVIS_OS_NAME" == osx && $QTVER != 532 ]]; then brew update; fi
 
 install:
-  - export SHORT_VER=`echo $QTVER | cut -b1-2`
-  - if [[ "$TRAVIS_OS_NAME" == linux ]]; then sudo apt-get -qy install qt${SHORT_VER}base qt${SHORT_VER}xmlpatterns; fi
+  - if [[ $QTVER != 502 ]]; then export SHORT_VER=`echo $QTVER | cut -b1-2`; fi
+  - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER == ust ]]; then sudo apt-get -qy install qt5-qmake qtbase5-dev libqt5xmlpatterns5-dev; fi
+  - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER != ust ]]; then sudo apt-get -qy install qt${SHORT_VER}base qt${SHORT_VER}xmlpatterns; fi
   - if [[ "$TRAVIS_OS_NAME" == osx && $QTVER != 521 ]]; then brew install qt5; fi
   - if [[ "$TRAVIS_OS_NAME" == osx && $QTVER == 521 ]]; then brew install homebrew/versions/qt52; fi
   - if [[ "$TRAVIS_OS_NAME" == osx && $QTVER != 521 ]]; then brew link --force qt5; fi
   - if [[ "$TRAVIS_OS_NAME" == osx && $QTVER == 521 ]]; then brew link --force homebrew/versions/qt52; fi
 
 before_script:
-  - if [[ "$TRAVIS_OS_NAME" == linux ]]; then export QMAKESPEC=linux-clang; fi
-  - if [[ "$TRAVIS_OS_NAME" == osx   ]]; then export QMAKESPEC=macx-clang;  fi
-  - if [[ "$TRAVIS_OS_NAME" == linux ]]; then . /opt/qt$SHORT_VER/bin/qt$SHORT_VER-env.sh; fi
+  - if [[ "$TRAVIS_OS_NAME" == linux && "$CXX" == clang++ ]]; then export QMAKESPEC=linux-clang; fi
+  - if [[ "$TRAVIS_OS_NAME" == linux && "$CXX" == g++     ]]; then export QMAKESPEC=linux-g++; fi
+  - if [[ "$TRAVIS_OS_NAME" == osx   && "$CXX" == clang++ ]]; then export QMAKESPEC=macx-clang;  fi
+  - if [[ "$TRAVIS_OS_NAME" == osx   && "$CXX" == g++     ]]; then export QMAKESPEC=macx-g++;  fi
+  - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER == ust ]]; then export QMAKE_VER=-qt=qt5; fi
+  - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER == 502 ]]; then export SHORT_VER=5; fi
+  - if [[ "$TRAVIS_OS_NAME" == linux && $QTVER != ust ]]; then . /opt/qt$SHORT_VER/bin/qt$SHORT_VER-env.sh; fi
   - qmake -v
-  - qmake -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release QtTest.pro
+  - qmake $QMAKE_VER -r -Wall -Wlogic -Wparser CONFIG+=debug_and_release QtTest.pro
 
 script:
   - make -j2 #all
