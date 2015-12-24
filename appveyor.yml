@@ -6,6 +6,7 @@ install:
   - set BOOST_PATH="C:\Libraries\boost"
 build_script:
   - qmake -v
+  - dir c:\mingw\lib\gcc\mingw32
   - dir %BOOST_PATH%
   - dir %QTDIR%
   #- echo %PATH%
