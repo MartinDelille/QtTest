@@ -1,7 +1,7 @@
 os: osx
 branches:
   except:
-    - av/*
+    - av/master
 env:
   - PATH=$PATH:/usr/local/opt/qt5/bin
 before_script:
