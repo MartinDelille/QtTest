@@ -7,7 +7,7 @@ build_script:
   - dir %QTDIR%
   #- echo %PATH%
   #  - qmake QtTest.pro
-  - qmake ConsoleTest/ConsoleTest.pro
+  - qmake ConsoleTest02/ConsoleTest02.pro
   - mingw32-make
   - dir
   - dir release
