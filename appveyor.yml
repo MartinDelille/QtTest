@@ -1,7 +1,7 @@
 install:
   #  - choco install InnoSetup
   - set QTDIR="C:\Qt\5.4\mingw491_32"
-  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw491_32\bin
     #- set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 build_script:
   - dir %QTDIR%
