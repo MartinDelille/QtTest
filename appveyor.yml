@@ -1,7 +1,7 @@
 environment:
-  conf:
-    - pouet
-    - choun
+  matrix:
+    - conf: pouet
+    - conf: choun
 #install:
 #  - choco install InnoSetup
 #  - set QTDIR="C:\Qt\5.4\mingw491_32"
