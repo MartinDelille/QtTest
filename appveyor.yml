@@ -1,19 +1,21 @@
-branches:
-  except:
-    - /^av/.*$/
-install:
-  - choco install InnoSetup
-  - set QTDIR="C:\Qt\5.4\mingw491_32"
-  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
-  - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
+environment:
+  conf:
+    - pouet
+    - choun
+#install:
+#  - choco install InnoSetup
+#  - set QTDIR="C:\Qt\5.4\mingw491_32"
+#  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+#  - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
 build_script:
-  - dir %QTDIR%
+  #- dir %QTDIR%
   #- echo %PATH%
-  - qmake QtTest.pro
-  - type Makefile.Release
-  - mingw32-make
-  - dir
-  - dir release
-  - set QTTEST_RELEASE_PATH=%CD%
-  - dir
-  - dir release
+  #- qmake QtTest.pro
+  #- type Makefile.Release
+  #- mingw32-make
+  #- dir
+  #- dir release
+  #- set QTTEST_RELEASE_PATH=%CD%
+  #- dir
+  #- dir release
+  - echo conf
