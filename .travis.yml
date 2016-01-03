@@ -15,5 +15,5 @@ install:
 script:
 #- qmake QtTest.pro
 #- make
-  - ls -l /usr/include
+  - ls -l /usr/include/libavformat
 
