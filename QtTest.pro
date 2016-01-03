@@ -25,12 +25,12 @@ QMAKE_POST_LINK += echo "i m a linux";
 }
 
 mac {
-	QMAKE_MAC_SDK = macosx10.9
 	QMAKE_POST_LINK += echo "i m a mac";
 
-	QMAKE_POST_LINK += macdeployqt QtTest.app -dmg;
-	QMAKE_POST_LINK += mv QtTest.dmg QtTest_v$${VERSION}.dmg;
+	deploy.commands = macdeployqt QtTest.app -dmg && mv QtTest.dmg QtTest_v$${VERSION}.dmg;
 }
+
+QMAKE_EXTRA_TARGETS += deploy
 
 win32 {
 QMAKE_POST_LINK += echo "i m a windows" &&
