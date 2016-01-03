@@ -1,4 +1,6 @@
 os: linux
+sudo: required
+dist: trusty
 branches:
   except:
     - av/*
