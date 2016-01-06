@@ -1,25 +1,11 @@
 os: osx
-#branches:
-#  except:
-#    - av/*
-#env:
-#  - PATH=$PATH:/usr/local/opt/qt5/bin
-#before_script:
-#- brew update > /dev/null
-#- brew install qt5
 script:
-#- qmake QtTest.pro
-#- make
 - ls -l
-#- export RELEASED_PACKAGE_FILENAME=$(ls -1 *_$TRAVIS_TAG.dmg)
 deploy:
   provider: releases
   api_key:
-    secure: BG0kSSy01X5l5ccjJSqbTk1T22rjmHs6PuzeS2+ZQZa4FRuFsQ7Ebha8HoK6r65Hou6ZmRWJbU6amu7LP28cVb1Vjc0FJ2faGaXIfslgbTI1K2XFyz7W5AMmkPPcY66/VxOtdK/L3XpfQBBgdhEISOAWZYsJe09FhL03bhwelv8=
-  #file: ${RELEASED_PACKAGE_FILENAME}
+    secure: PY1aBnI0PqHiFnz4CxBx+uQOVj68QWXLT0l0LnKRBaigAuGE7p4PLdxV+OxL69rgVfMGx996Jq4dLQF8/eERZGBEzbydTU9wwNKQpgfpN7ANz/Kr9YktV7XKVdZMktXoploMSzSMw8JDgq51lbcp5SO40w78vz0FAHUtJK6ab7M=
   file: test.txt
-  skip_cleanup: true
   on:
-    tags: true
-    all_branches: true
     repo: Phonations/TravisTest
+    branch: deploy-travis-appveyor
