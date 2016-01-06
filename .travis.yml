@@ -1,6 +1,9 @@
 os:
   - osx
   - linux
+env:
+  - JOB=AAA
+  - JOB=BBB
 script:
 - ls -l
 deploy:
