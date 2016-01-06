@@ -21,7 +21,7 @@ build_script:
 artifacts:
   #  - path: QtTest_v*.txt
   #    name: MyArtifact
-  - path: test.txt
+  - path: fromappveyor.txt
     name: MyArtifact
 deploy:
   provider: GitHub
