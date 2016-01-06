@@ -1,12 +1,14 @@
-os: osx
+os:
+  - osx
+  - linux
 script:
 - ls -l
 deploy:
   provider: releases
   api_key:
     secure: PY1aBnI0PqHiFnz4CxBx+uQOVj68QWXLT0l0LnKRBaigAuGE7p4PLdxV+OxL69rgVfMGx996Jq4dLQF8/eERZGBEzbydTU9wwNKQpgfpN7ANz/Kr9YktV7XKVdZMktXoploMSzSMw8JDgq51lbcp5SO40w78vz0FAHUtJK6ab7M=
-  file: fromtravis.txt
+  file: $TRAVIS_OS_NAME.txt
   skip_cleanup: true
   on:
     repo: Phonations/TravisTest
-    tags: true
+    tags: false
