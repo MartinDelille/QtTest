@@ -1,0 +1,34 @@
+os: unstable
+branches:
+  only:
+    - av/deploy
+install:
+  - choco install -y InnoSetup
+  - set QTDIR=C:\Qt\5.4\mingw491_32
+  - set PATH=%QTDIR%\bin;C:\Qt\Tools\mingw491_32\bin;"C:\Program Files (x86)\Inno Setup 5";C:\Windows\bin;C:\Windows;C:\ProgramData\chocolatey\bin
+  - set QTTEST_RELEASE_PATH=%CD%
+build_script:
+  - dir C:\Qt
+  - dir C:\Qt\5.4
+  - dir %QTDIR%\bin
+  - echo %PATH%
+  - qmake QtTest.pro
+  - type Makefile.Release
+  - mingw32-make
+#  - windeployqt --verbose 3 release/QtTest.exe
+  - dir release
+#  - iscc QtTest.iss
+  - dir
+artifacts:
+  - path: QtTest_v*.txt
+    name: MyArtifact
+deploy:
+  provider: GitHub
+  auth_token:
+    secure: 9bMCGL2D0e/GK3MGOJu7Ma1hNb6sxAOyEftuonF/tV31LoLLM77+hitI6T3snyCM
+  artifact: /QtTest_v[0-9]+\.[0-9]+\.[0-9]+\.txt/
+  draft: false
+  prerelease: false
+  on:
+    branch: av/deploy
+    appveyor_repo_tag: true
