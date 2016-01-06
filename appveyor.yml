@@ -28,7 +28,7 @@ deploy:
   auth_token:
     secure: 9bMCGL2D0e/GK3MGOJu7Ma1hNb6sxAOyEftuonF/tV31LoLLM77+hitI6T3snyCM
   #artifact: /QtTest_v[0-9]+\.[0-9]+\.[0-9]+\.txt/
-  artifact: test.txt
+  artifact: fromappveyor.txt
   draft: false
   prerelease: false
   on:
