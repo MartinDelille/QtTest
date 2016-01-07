@@ -17,7 +17,7 @@ build_script:
 #  - windeployqt --verbose 3 release/QtTest.exe
 #  - dir release
   - iscc /?
-  - iscc QtTest.iss /DAAA=pouet
+  - iscc QtTest.iss /DAAA=pouet /O"."
   - dir
 artifacts:
   #  - path: QtTest_v*.txt
