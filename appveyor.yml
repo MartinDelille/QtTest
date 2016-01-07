@@ -1,19 +1,14 @@
 environment:
-  BABA: babedoua
-  POUET: Paubd
+  QTDIR: C:\Qt\5.4\mingw491_32
 
 #branches:
 #  only:
 #    - av/deploy
 install:
   - choco install -y InnoSetup
-  - set QTDIR=C:\Qt\5.4\mingw491_32
   - set PATH=%QTDIR%\bin;C:\Qt\Tools\mingw491_32\bin;"C:\Program Files (x86)\Inno Setup 5";C:\Windows\bin;C:\Windows;C:\ProgramData\chocolatey\bin
   - set QTTEST_RELEASE_PATH=%CD%
 build_script:
-  - echo %POUET%
-  - echo %BABA%
-  - echo %PATH%
   - qmake QtTest.pro
   #  - type Makefile.Release
   - mingw32-make
@@ -25,7 +20,6 @@ build_script:
   - dir
 artifacts:
   #  - path: QtTest_v*.txt
-  #    name: MyArtifact
   - path: fromappveyor.txt
     name: MyArtifact
 deploy:
