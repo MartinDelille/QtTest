@@ -1,7 +1,7 @@
 environment:
   global:
-    POUET=%CD%
-    BABA=babedoua
+    - POUET=%CD%
+    - BABA=babedoua
 #branches:
 #  only:
 #    - av/deploy
