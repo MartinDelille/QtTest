@@ -15,4 +15,5 @@ deploy:
   on:
     tags: true
 #    condition: $JOB = AAA
-    condition: $TRAVIS_OS_NAME = osx
+#    condition: $TRAVIS_OS_NAME = osx
+    condition: $JOB = AAA && $TRAVIS_OS_NAME = osx
