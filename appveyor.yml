@@ -1,3 +1,7 @@
+environment:
+  global:
+    POUET=%CD%
+    BABA=babedoua
 #branches:
 #  only:
 #    - av/deploy
@@ -7,6 +11,8 @@ install:
   - set PATH=%QTDIR%\bin;C:\Qt\Tools\mingw491_32\bin;"C:\Program Files (x86)\Inno Setup 5";C:\Windows\bin;C:\Windows;C:\ProgramData\chocolatey\bin
   - set QTTEST_RELEASE_PATH=%CD%
 build_script:
+  - echo %POUET%
+  - echo %BABA%
   - echo %PATH%
   - qmake QtTest.pro
   #  - type Makefile.Release
