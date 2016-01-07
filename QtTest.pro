@@ -25,10 +25,10 @@ mac {
 	deploy.commands += mv QtTest.dmg QtTest_v$${VERSION}.dmg;
 }
 
-win {
-  deploy.command += windeployqt release &
-  deploy.command += iscc $${TARGET}.iss
+win32 {
+  deploy.commands += windeployqt release &
+  deploy.commands += iscc $${TARGET}.iss
 }
 
-QMAKE_EXTRA_TARGETS += installer
+QMAKE_EXTRA_TARGETS += deploy
 
