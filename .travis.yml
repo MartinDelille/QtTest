@@ -15,4 +15,5 @@ deploy:
   on:
     repo: Phonations/TravisTest
     all_branches: true
-    tags: false
+    tags: true
+    condition: $JOB=AAA && $TRAVIS_OS_NAME=osx
