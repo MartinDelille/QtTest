@@ -27,7 +27,7 @@ mac {
 
 win32 {
   deploy.commands += windeployqt release &
-  deploy.commands += iscc $${_PRO_FILE_PWD_}\QtTest.iss /DAAA=pouet
+  deploy.commands += iscc $${_PRO_FILE_PWD_}\QtTest.iss /DAAA=$$OUT_PWD
 
 }
 

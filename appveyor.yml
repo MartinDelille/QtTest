@@ -4,17 +4,14 @@ environment:
 #branches:
 #  only:
 #    - av/deploy
+
 install:
   - choco install -y InnoSetup
   - set PATH=%QTDIR%\bin;C:\Qt\Tools\mingw491_32\bin;"C:\Program Files (x86)\Inno Setup 5";C:\Windows\bin;C:\Windows;C:\ProgramData\chocolatey\bin
   - set QTTEST_RELEASE_PATH=%CD%
 build_script:
   - qmake QtTest.pro
-  #  - type Makefile.Release
   - mingw32-make
-#  - windeployqt --verbose 3 release/QtTest.exe
-#  - dir release
-#- iscc /?
 #  - iscc QtTest.iss /DAAA=pouet /O"."
   - mingw32-make deploy
   - dir
