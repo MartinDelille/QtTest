@@ -21,7 +21,7 @@ build_script:
 #  - dir release
 #- iscc /?
 #  - iscc QtTest.iss /DAAA=pouet /O"."
-  - mingw32-make installer
+  - mingw32-make deploy
   - dir
 artifacts:
   #  - path: QtTest_v*.txt
