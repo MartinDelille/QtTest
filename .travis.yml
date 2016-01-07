@@ -16,4 +16,4 @@ deploy:
     repo: Phonations/TravisTest
     all_branches: true
     tags: true
-    condition: $JOB=AAA
+    condition: "$JOB=AAA"
