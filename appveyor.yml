@@ -1,6 +1,6 @@
 environment:
   BABA: babedoua
-#  POUET: %CD%
+  POUET: Paubd
 
 #branches:
 #  only:
