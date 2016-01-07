@@ -1,3 +1,6 @@
+branches:
+  except:
+    - deploy-travis-appveyor
 os:
   - osx
   - linux
