@@ -7,7 +7,7 @@
 #define MyAppURL "http://www.phonations.com/"
 #define MyAppExeName "QtTest.exe"
 
-#pragma message coucou
+#pragma message "coucou"
 
 ;#define MyAppSrc "release\" + MyAppExeName
 ;#if !FileExists(MyAppSrc)
