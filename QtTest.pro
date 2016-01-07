@@ -20,26 +20,15 @@ FORMS    += QtTestWindow.ui
 
 OTHER_FILES += QtTest.iss
 
-#linux {
-#QMAKE_POST_LINK += echo "i m a linux";
-#}
-
 mac {
-	QMAKE_POST_LINK += echo "i m a mac";
-
-	deploy.commands = macdeployqt QtTest.app -dmg && mv QtTest.dmg QtTest_v$${VERSION}.dmg;
+	deploy.commands += macdeployqt QtTest.app -dmg &&
+	deploy.commands += mv QtTest.dmg QtTest_v$${VERSION}.dmg;
 }
 
-QMAKE_EXTRA_TARGETS += deploy
-
-	win32 {
-    QMAKE_POST_LINK += echo "====== windeployqt ======" &
-		QMAKE_POST_LINK += windeployqt release &
-
-		QMAKE_POST_LINK += echo "====== PATH 2 ======" &
-    QMAKE_POST_LINK += echo %PATH% &
-		QMAKE_POST_LINK += echo "====== Deploying $${_PRO_FILE_PWD_}/$${TARGET}.iss ======" &
-#		QMAKE_POST_LINK += $${QMAKE_COPY} $$shell_path($${_PRO_FILE_PWD_}/$${TARGET}.iss) . &
-		QMAKE_POST_LINK += iscc $${TARGET}.iss &
-	}
+win {
+  deploy.command += windeployqt release &
+  deploy.command += iscc $${TARGET}.iss
 }
+
+QMAKE_EXTRA_TARGETS += installer
+

@@ -16,8 +16,9 @@ build_script:
   #  - mingw32-make
 #  - windeployqt --verbose 3 release/QtTest.exe
 #  - dir release
-  - iscc /?
-  - iscc QtTest.iss /DAAA=pouet /O"."
+#- iscc /?
+#  - iscc QtTest.iss /DAAA=pouet /O"."
+  - mingw32-make installer
   - dir
 artifacts:
   #  - path: QtTest_v*.txt
