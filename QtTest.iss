@@ -7,6 +7,8 @@
 #define MyAppURL "http://www.phonations.com/"
 #define MyAppExeName "QtTest.exe"
 
+#pragma message coucou
+
 ;#define MyAppSrc "release\" + MyAppExeName
 ;#if !FileExists(MyAppSrc)
 ;#error "Unable to find MyAppSrc"
@@ -33,7 +35,7 @@ DisableDirPage=yes
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 ;LicenseFile="LICENSE.TXT"
-OutputDir={#MyOutputDir}
+;OutputDir={#MyOutputDir}
 OutputBaseFilename={#MyAppName}Setup_v{#MyAppVersion}
 ;OutputBaseFilename={#MyAppName}Setup.exe
 Compression=lzma
