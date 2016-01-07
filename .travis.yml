@@ -1,6 +1,3 @@
-branches:
-  except:
-    - deploy-travis-appveyor
 os:
   - osx
   - linux
@@ -13,7 +10,7 @@ deploy:
   provider: releases
   api_key:
     secure: PY1aBnI0PqHiFnz4CxBx+uQOVj68QWXLT0l0LnKRBaigAuGE7p4PLdxV+OxL69rgVfMGx996Jq4dLQF8/eERZGBEzbydTU9wwNKQpgfpN7ANz/Kr9YktV7XKVdZMktXoploMSzSMw8JDgq51lbcp5SO40w78vz0FAHUtJK6ab7M=
-  file: $TRAVIS_OS_NAME-$JOB.txt
+  file: $TRAVIS_OS_NAME-$JOB.*
   skip_cleanup: true
   on:
     tags: true
