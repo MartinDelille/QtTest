@@ -9,6 +9,12 @@
 
 #pragma message "coucou"
 
+#if Defined(AAA)
+#pragma message "AAA is defined:"
+#pragma message AAA
+#else
+#pragma message "AAA is not defined:"
+#endif
 ;#define MyAppSrc "release\" + MyAppExeName
 ;#if !FileExists(MyAppSrc)
 ;#error "Unable to find MyAppSrc"
