@@ -1,7 +1,6 @@
 environment:
-  global:
-    BABA: babedoua
-    POUET: %CD%
+  BABA: babedoua
+  POUET: %CD%
 #branches:
 #  only:
 #    - av/deploy
