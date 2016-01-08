@@ -1,23 +1,23 @@
 os: osx
-environment:
-  - JOB=AAA
-  - JOB=BBB
 branches:
   except:
     - av/*
 env:
   matrix:
-  - PATH=$PATH:/usr/local/opt/qt5/bin
+  - JOB=AAA
+  - JOB=BBB
   global:
-    secure: ZgXEgOBy15tqNeMrl64NqRWYCNSSEYQfaKWsIloRiTePqRUL981tIqSIyPBdToPJgj5rRCMtRGiI6yD5DaGvY1aD0xg2f9TM5bSkM5hT0ZPc5CckAXm5iZs1G7mLzd4m6fc0NRrWgontvleTPF53g2P6DtzQMOrBcAAd92FxtBA=
+  - PATH=$PATH:/usr/local/opt/qt5/bin
+  - secure: ZgXEgOBy15tqNeMrl64NqRWYCNSSEYQfaKWsIloRiTePqRUL981tIqSIyPBdToPJgj5rRCMtRGiI6yD5DaGvY1aD0xg2f9TM5bSkM5hT0ZPc5CckAXm5iZs1G7mLzd4m6fc0NRrWgontvleTPF53g2P6DtzQMOrBcAAd92FxtBA=
 before_script:
 #- brew update > /dev/null
 - brew install qt5
 script:
 #- qmake QtTest.pro
 #- make
+- echo "job:"
+- echo $JOB
 - echo "pouet"
-- echo "job: $JOB"
 - pwd
 #- cat cov-int/scm_log.txt
 addons:
