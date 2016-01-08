@@ -17,6 +17,7 @@ script:
 #- qmake QtTest.pro
 #- make
 - echo "pouet"
+- echo "job: $JOB"
 - pwd
 #- cat cov-int/scm_log.txt
 addons:
