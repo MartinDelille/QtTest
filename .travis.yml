@@ -1,4 +1,7 @@
 os: osx
+environment:
+  - JOB=AAA
+  - JOB=BBB
 branches:
   except:
     - av/*
@@ -15,7 +18,7 @@ script:
 #- make
 - echo "pouet"
 - pwd
-- cat cov-int/scm_log.txt
+#- cat cov-int/scm_log.txt
 addons:
   coverity_scan:
     project:
@@ -26,3 +29,4 @@ addons:
     build_command_prepend: qmake QtTest.pro
     build_command: make -j 4
     branch_pattern: coverity
+    build_script_url: https://raw.githubusercontent.com/Phonations/TravisTest/coverity-matrix/coverity.sh
