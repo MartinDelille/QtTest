@@ -30,4 +30,4 @@ addons:
     build_command_prepend: qmake QtTest.pro
     build_command: make -j 4
     branch_pattern: coverity
-    build_script_url: https://raw.githubusercontent.com/Phonations/TravisTest/coverity-matrix/coverity.sh
+#    build_script_url: https://raw.githubusercontent.com/Phonations/TravisTest/coverity-matrix/coverity.sh
