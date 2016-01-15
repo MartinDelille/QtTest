@@ -11,5 +11,6 @@ script:
 - qmake QtTest.pro
 - make
 notifications:
+  email: false
   slack:
     secure: ZYfEOfq2hgRNtb491t5Fsl1dw4vXfmBsHbOowZEFvICNopAddwwJehMZPZr3ygEsrvuR95W+vXrAsySNnbTg++SiTviNN8Md9zN/YAfgxY5IXL/QuCPfchgJ+w5oWKoq11BH5oL86EfjG8ZrgDMQ3WxOI2qcfoJ8TSXNB1dhxSE=
