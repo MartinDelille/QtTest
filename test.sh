@@ -2,3 +2,5 @@
 
 cp a.txt b.txt
 
+echo "coucou"
+
