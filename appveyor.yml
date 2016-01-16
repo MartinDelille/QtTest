@@ -1,5 +1,5 @@
 branches:
-  except:
+  only:
     - /^av/.*$/
 install:
   - choco install InnoSetup
