@@ -9,6 +9,9 @@ env:
   global:
   - PATH=$PATH:/usr/local/opt/qt5/bin
   - COVERITY_SCAN_PROJECT_NAME=TravisTest
+  - COVERITY_SCAN_NOTIFICATION_EMAIL=martin@phonations.com
+  - COVERITY_SCAN_BRANCH_PATTERN=coverity-matrix-without-addon
+  - COVERITY_SCAN_BUILD_COMMAND=make
   - secure: ZgXEgOBy15tqNeMrl64NqRWYCNSSEYQfaKWsIloRiTePqRUL981tIqSIyPBdToPJgj5rRCMtRGiI6yD5DaGvY1aD0xg2f9TM5bSkM5hT0ZPc5CckAXm5iZs1G7mLzd4m6fc0NRrWgontvleTPF53g2P6DtzQMOrBcAAd92FxtBA=
 #before_script:
 #- brew update > /dev/null
