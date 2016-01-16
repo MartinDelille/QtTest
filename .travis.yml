@@ -1,13 +1,13 @@
 os: osx
 branches:
   except:
-    - av/*
+  - av/*
 env:
   matrix:
   - JOB=AAA
   - JOB=BBB
   global:
-  - PATH=$PATH:/usr/local/opt/qt5/bin
+- PATH=$PATH:/usr/local/opt/qt5/bin
   - secure: ZgXEgOBy15tqNeMrl64NqRWYCNSSEYQfaKWsIloRiTePqRUL981tIqSIyPBdToPJgj5rRCMtRGiI6yD5DaGvY1aD0xg2f9TM5bSkM5hT0ZPc5CckAXm5iZs1G7mLzd4m6fc0NRrWgontvleTPF53g2P6DtzQMOrBcAAd92FxtBA=
 before_script:
 #- brew update > /dev/null
@@ -31,3 +31,9 @@ addons:
     build_command: make -j 4
     branch_pattern: coverity-matrix
     build_script_url: https://raw.githubusercontent.com/Phonations/TravisTest/coverity-matrix/coverity.sh
+- qmake QtTest.pro
+- make
+notifications:
+  email: false
+  slack:
+    secure: ZYfEOfq2hgRNtb491t5Fsl1dw4vXfmBsHbOowZEFvICNopAddwwJehMZPZr3ygEsrvuR95W+vXrAsySNnbTg++SiTviNN8Md9zN/YAfgxY5IXL/QuCPfchgJ+w5oWKoq11BH5oL86EfjG8ZrgDMQ3WxOI2qcfoJ8TSXNB1dhxSE=
