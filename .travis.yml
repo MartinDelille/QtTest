@@ -8,7 +8,7 @@ env:
   - JOB=BBB
   global:
   - PATH=$PATH:/usr/local/opt/qt5/bin
-  - COVERITY_SCAN_PROJECT_NAME=TravisTest
+  - COVERITY_SCAN_PROJECT_NAME=Phonations/TravisTest
   - COVERITY_SCAN_NOTIFICATION_EMAIL=martin@phonations.com
   - COVERITY_SCAN_BRANCH_PATTERN=coverity-matrix-without-addon
   - COVERITY_SCAN_BUILD_COMMAND=make
@@ -21,8 +21,6 @@ script:
 #- make
 - echo "job:"
 - echo $JOB
-- echo "COVERITY_SCAN_TOKEN:"
-- echo $COVERITY_SCAN_TOKEN
 - echo "pouet"
 - if [[ "$JOB" == AAA ]]; then curl -s https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh | bash; fi
 notifications:
