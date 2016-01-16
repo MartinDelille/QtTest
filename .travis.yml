@@ -18,21 +18,7 @@ script:
 - echo "job:"
 - echo $JOB
 - echo "pouet"
-- pwd
-#- cat cov-int/scm_log.txt
-addons:
-  coverity_scan:
-    project:
-      name: Phonations/TravisTest
-      description: Build submitted via Travis CI
-    notification_email: martin@phonations.com
-    build_command_prepend: cov-configure --comptype clangcxx --compiler clang++ --template
-    build_command_prepend: qmake QtTest.pro
-    build_command: make -j 4
-    branch_pattern: coverity-matrix
-    build_script_url: https://raw.githubusercontent.com/Phonations/TravisTest/coverity-matrix/coverity.sh
-- qmake QtTest.pro
-- make
+- if [[ "$JOB" == AAA ]]; then curl -s https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh | bash; fi
 notifications:
   email: false
   slack:
