@@ -21,6 +21,8 @@ script:
 #- make
 - echo "job:"
 - echo $JOB
+- echo "COVERITY_SCAN_TOKEN:"
+- echo $COVERITY_SCAN_TOKEN
 - echo "pouet"
 - if [[ "$JOB" == AAA ]]; then curl -s https://scan.coverity.com/scripts/travisci_build_coverity_scan.sh | bash; fi
 notifications:
