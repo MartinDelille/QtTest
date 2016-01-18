@@ -1,9 +1,9 @@
-os: osx
 branches:
   except:
   - av/*
 env:
-- PATH=$PATH:/usr/local/opt/qt5/bin
+  global:
+  - PATH=$PATH:/usr/local/opt/qt5/bin
 matrix:
   include:
     - os: osx
@@ -17,6 +17,7 @@ matrix:
 script:
 #- qmake QtTest.pro
 #- make
+- echo $PATH
 - echo $JOB
 notifications:
   email: false
