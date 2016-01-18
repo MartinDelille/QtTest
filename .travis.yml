@@ -7,9 +7,13 @@ env:
 matrix:
   include:
     - os: osx
-      env: JOB=AAA
+      env:
+        - JOB=AAA
+        - QTVER=532
     - os: linux
-      env: JOB=BBB
+      env:
+        - JOB=BBB
+        - QTVER=551
 
 #before_script:
   #- brew update > /dev/null
@@ -19,6 +23,7 @@ script:
 #- make
 - echo $PATH
 - echo $JOB
+- echo $QTVER
 notifications:
   email: false
   slack:
