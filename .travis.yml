@@ -17,8 +17,7 @@ script:
   - echo $APPLICATION_CERTIFICATE
   #- qmake QtTest.pro
   #- make
-  - ls -l
-  - cat pouet.txt
+  - security import ./mac_app.cer -k ~/Library/Keychains/login.keychain -T /usr/bin/codesign
   - security list-keychains
   - security find-identity
 notifications:
