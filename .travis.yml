@@ -9,8 +9,8 @@ env:
     - APPLICATION_CERTIFICATE='"3rd Party Mac Developer Application: Phonations (Y44UPVP368)"'
     - secure: JnQLoFDGDtr3g1vrnJHZ1UxdAtZ+TgLY73GgLIxfkoRn/ClaXarHRcGKDdfkK7lIZx2lEFYAwbG6bOIn6msD/NTaveqeyWNeCa5c6VZdr2HynhHT8/IPC2J7gG4ikakZ92TUASDjPSsh96nQ4ZCi8AOVySx688cRVZmtdSEeQfk=
 before_script:
-- brew update > /dev/null
-- brew install qt5
+  #- brew update > /dev/null
+  #- brew install qt5
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in mac_app.cer.enc -d -a -out mac_app.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in pouet.txt.enc -d -a -out pouet.txt
 - security create-keychain -p travis macos-build.keychain
@@ -18,10 +18,11 @@ before_script:
 - security unlock-keychain -p travis macos-build.keychain
 - security set-keychain-settings -t 3600 -l ~/Library/Keychains/macos-build.keychain
 - security import ./mac_app.cer -k ~/Library/Keychains/macos-build.keychain -T /usr/bin/codesign
+- security find-identity
 script:
   - echo $APPLICATION_CERTIFICATE
-  - qmake QtTest.pro
-  - make
+  #- qmake QtTest.pro
+  #- make
   - ls -l
   - cat pouet.txt
 notifications:
