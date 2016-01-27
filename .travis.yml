@@ -6,7 +6,8 @@ env:
   matrix:
   - PATH=$PATH:/usr/local/opt/qt5/bin
   global:
-    secure: JnQLoFDGDtr3g1vrnJHZ1UxdAtZ+TgLY73GgLIxfkoRn/ClaXarHRcGKDdfkK7lIZx2lEFYAwbG6bOIn6msD/NTaveqeyWNeCa5c6VZdr2HynhHT8/IPC2J7gG4ikakZ92TUASDjPSsh96nQ4ZCi8AOVySx688cRVZmtdSEeQfk=
+    - APPLICATION_CERTIFICATE='"3rd Party Mac Developer Application: Phonations (Y44UPVP368)"'
+    - secure: JnQLoFDGDtr3g1vrnJHZ1UxdAtZ+TgLY73GgLIxfkoRn/ClaXarHRcGKDdfkK7lIZx2lEFYAwbG6bOIn6msD/NTaveqeyWNeCa5c6VZdr2HynhHT8/IPC2J7gG4ikakZ92TUASDjPSsh96nQ4ZCi8AOVySx688cRVZmtdSEeQfk=
 before_script:
   #- brew update > /dev/null
   #- brew install qt5
@@ -22,6 +23,7 @@ script:
   #- make
   - ls -l
   - cat pouet.txt
+  - echo $APPLICATION_CERTIFICATE
 notifications:
   email: false
   slack:
