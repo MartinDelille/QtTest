@@ -3,13 +3,20 @@ branches:
   except:
   - av/*
 env:
-- PATH=$PATH:/usr/local/opt/qt5/bin
+  matrix:
+  - PATH=$PATH:/usr/local/opt/qt5/bin
+  global:
+    secure: JnQLoFDGDtr3g1vrnJHZ1UxdAtZ+TgLY73GgLIxfkoRn/ClaXarHRcGKDdfkK7lIZx2lEFYAwbG6bOIn6msD/NTaveqeyWNeCa5c6VZdr2HynhHT8/IPC2J7gG4ikakZ92TUASDjPSsh96nQ4ZCi8AOVySx688cRVZmtdSEeQfk=
 before_script:
 - brew update > /dev/null
 - brew install qt5
+#- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in mac_app.cer.enc -d -a -out mac_app.cer
+- openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in pouet.txt.enc -d -a -out pouet.txt
 script:
-- qmake QtTest.pro
-- make
+  #- qmake QtTest.pro
+  #- make
+  - ls -l
+  - cat pouet.txt
 notifications:
   email: false
   slack:
