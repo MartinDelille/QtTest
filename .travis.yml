@@ -12,14 +12,15 @@ before_script:
   #- brew update > /dev/null
   #- brew install qt5
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in mac_app.cer.enc -d -a -out mac_app.cer
-- ./add-key.sh
-- security find-identity
+#- ./add-key.sh
 script:
   - echo $APPLICATION_CERTIFICATE
   #- qmake QtTest.pro
   #- make
   - ls -l
   - cat pouet.txt
+  - security list-keychains
+  - security find-identity
 notifications:
   email: false
   slack:
