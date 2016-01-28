@@ -17,7 +17,7 @@ security unlock-keychain -p travis macos-build.keychain
 security set-keychain-settings -t 3600 -l ~/Library/Keychains/macos-build.keychain
 
 # Add certificates to keychain and allow codesign to access them
-security import ./apple.cer -k ~/Library/Keychains/gephi-build.keychain -T /usr/bin/codesign
+security import ./apple.cer -k ~/Library/Keychains/macos-build.keychain -T /usr/bin/codesign
 security import ./mac_app.cer -k ~/Library/Keychains/macos-build.keychain -T /usr/bin/codesign
 security import ./dev_id.p12 -k ~/Library/Keychains/macos-build.keychain -P $KEY_PASSWORD -T /usr/bin/codesign
 
