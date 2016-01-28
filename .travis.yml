@@ -9,18 +9,18 @@ env:
   - secure: JnQLoFDGDtr3g1vrnJHZ1UxdAtZ+TgLY73GgLIxfkoRn/ClaXarHRcGKDdfkK7lIZx2lEFYAwbG6bOIn6msD/NTaveqeyWNeCa5c6VZdr2HynhHT8/IPC2J7gG4ikakZ92TUASDjPSsh96nQ4ZCi8AOVySx688cRVZmtdSEeQfk=
   - secure: XwlqVTU2g0dstj6M+oq/y+NwzIfashSYblHJNH/OqA+4SS6eWw4+HY2G3XkBmCotUFfpIFs83ab8WaeY+fvD3tWavP4b1oKyxWromCDkyUragsD7hTOmXPqU5LRo+JaCDWxU6HgSAn7MLkoGi8w3SxgPSep2DJHnzcJPyBzaUc8=
 before_script:
-#- brew update > /dev/null
-#- brew install qt5
+- brew update > /dev/null
+- brew install qt5
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in mac_app.cer.enc -d -a -out mac_app.cer
 - openssl aes-256-cbc -k "$ENCRYPTION_SECRET" -in dev_id.p12.enc -d -a -out dev_id.p12
 - "./add-key.sh"
 - security find-identity
 script:
 - echo $APPLICATION_CERTIFICATE
-#- qmake QtTest.pro
-#- make
+- qmake QtTest.pro
+- make
 - ls -l
-- cat pouet.txt
+- codesign -v QtApp.app
 notifications:
   email: false
   slack:
