@@ -2,14 +2,7 @@ os: osx
 branches:
   except:
   - av/*
-env:
-- PATH=$PATH:/usr/local/opt/qt5/bin
-before_script:
-  #- brew update > /dev/null
-  #- brew install qt5
 script:
-#- qmake QtTest.pro
-#- make
 - ls -l
 notifications:
   email: false
