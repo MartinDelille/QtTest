@@ -5,6 +5,7 @@ branches:
 script:
 - ls -l
 - cat pouet.txt
+- cat folder/super.txt
 notifications:
   email: false
   slack:
