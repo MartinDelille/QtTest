@@ -5,7 +5,7 @@ branches:
 env:
   global:
   - PATH=$PATH:/usr/local/opt/qt5/bin
-  - APPLICATION_CERTIFICATE='"3rd Party Mac Developer Application: Phonations (Y44UPVP368)"'
+  - 'APPLICATION_CERTIFICATE="3rd Party Mac Developer Application: Phonations (Y44UPVP368)"'
   - secure: JnQLoFDGDtr3g1vrnJHZ1UxdAtZ+TgLY73GgLIxfkoRn/ClaXarHRcGKDdfkK7lIZx2lEFYAwbG6bOIn6msD/NTaveqeyWNeCa5c6VZdr2HynhHT8/IPC2J7gG4ikakZ92TUASDjPSsh96nQ4ZCi8AOVySx688cRVZmtdSEeQfk=
   - secure: XwlqVTU2g0dstj6M+oq/y+NwzIfashSYblHJNH/OqA+4SS6eWw4+HY2G3XkBmCotUFfpIFs83ab8WaeY+fvD3tWavP4b1oKyxWromCDkyUragsD7hTOmXPqU5LRo+JaCDWxU6HgSAn7MLkoGi8w3SxgPSep2DJHnzcJPyBzaUc8=
 before_script:
@@ -20,7 +20,7 @@ script:
 - qmake QtTest.pro
 - make
 - ls -l
-- codesign -v QtApp.app
+- codesign -v QtTest.app
 notifications:
   email: false
   slack:
