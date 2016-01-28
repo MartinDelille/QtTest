@@ -7,8 +7,8 @@ env:
   - JOB=BBB
 script:
 - if [[ $JOB == AAA ]]; then
-  echo this is job AAA
-  echo thank you for coming
+  echo this is job AAA;
+  echo thank you for coming;
   fi
 - ls -l
 notifications:
