@@ -11,7 +11,11 @@ script:
 #- qmake QtTest.pro
 #- make
 - ls -l
+- cat pouet.txt
 notifications:
   email: false
   slack:
     secure: ZYfEOfq2hgRNtb491t5Fsl1dw4vXfmBsHbOowZEFvICNopAddwwJehMZPZr3ygEsrvuR95W+vXrAsySNnbTg++SiTviNN8Md9zN/YAfgxY5IXL/QuCPfchgJ+w5oWKoq11BH5oL86EfjG8ZrgDMQ3WxOI2qcfoJ8TSXNB1dhxSE=
+before_install:
+- openssl aes-256-cbc -K $encrypted_3563be7cfb77_key -iv $encrypted_3563be7cfb77_iv
+  -in pouet.txt.enc -out pouet.txt -d
