@@ -27,7 +27,7 @@ mac {
 	QMAKE_POST_LINK += echo "i m a mac";
 
 	CONFIG(release, debug|release) {
-		QMAKE_POST_LINK += macdeployqt $${TARGET}.app -codesign=$$(APPLICATION_CERTIFICATE);
+		QMAKE_POST_LINK += macdeployqt $${TARGET}.app -codesign="3rd Party Mac Developer Application: Phonations (Y44UPVP368)";
 	}
 }
 
