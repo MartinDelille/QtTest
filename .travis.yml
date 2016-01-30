@@ -4,7 +4,9 @@ env:
     - POUET=$HOME
 matrix:
   include:
-    - script: ./coucou.sh
+    - script:
+      - ./coucou.sh
+      - echo second line
       env: JOB="COUCOU"
     - script: ./chouette.sh
       env: JOB="CHOUETTE"
