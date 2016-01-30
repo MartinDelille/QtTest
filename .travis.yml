@@ -21,4 +21,4 @@ sudo: false
 addons:
   apt:
     packages:
-    - qt55base
+    - qt5-default
