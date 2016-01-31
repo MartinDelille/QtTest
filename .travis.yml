@@ -7,10 +7,8 @@ env:
 #- brew update > /dev/null
 #- brew install qt5
 script:
-- ls -l /opt
-- ls -l /usr
-- ls -l /usr/opt
-- ls -l /usr/local/opt
+- ls -l /usr/local/
+- qtchooser -list-versions
 - qmake -v
 - qmake QtTest.pro
 - make
