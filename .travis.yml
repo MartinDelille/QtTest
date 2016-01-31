@@ -7,8 +7,10 @@ env:
 #- brew update > /dev/null
 #- brew install qt5
 script:
-- doxygen
 - ls -l /opt
+- ls -l /usr
+- ls -l /usr/opt
+- ls -l /usr/local/opt
 - qmake -v
 - qmake QtTest.pro
 - make
@@ -25,4 +27,3 @@ addons:
     - debian-sid
     packages:
     - qtbase5-dev
-    - doxygen
