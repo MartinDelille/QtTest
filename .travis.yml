@@ -20,9 +20,7 @@ sudo: false
 
 addons:
   apt:
-    sources:
-    - debian-sid
     packages:
-    - qt5-default
+    - qtbase5-dev
     - uncrustify
     - doxygen
