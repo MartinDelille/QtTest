@@ -1,6 +1,5 @@
-os: unstable
 branches:
   only:
-    - av/*
+    - /^av\/.*$/
 build_script:
   - echo "doing nothing here"
