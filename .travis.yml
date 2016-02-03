@@ -21,3 +21,5 @@ deploy:
   skip_cleanup: true
   secret_access_key:
     secure: Y+UuLwIeQfjEvmNaQzM1576zSIevgyZu5x7eg6F/XBFmfNjFYR+567GKCNDKIn1f5yvyxy8hz/FjdTdkCBTLx71V54M88SK+30G7FDXRk0OaGHzqWvkXdnk3UbXHh5WZ2dQdoo8ve8PB/vnkx5US1/yhL+YDDNcTbTuJkCP+thg=
+  on:
+    branch: aws
