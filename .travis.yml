@@ -1,6 +1,9 @@
 os:
   - osx
   - linux
+branches:
+  except:
+  - "/^skipthisbranch$/"
 env:
   - JOB=AAA
   - JOB=BBB
