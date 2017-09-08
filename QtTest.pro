@@ -19,6 +19,11 @@ FORMS    += QtTestWindow.ui
 
 message("coucou c'est nous!")
 
+unix {
+INCLUDEPATH += /usr/local/include
+LIBS += -L/usr/local/lib -lsndfile
+}
+
 #linux {
 #QMAKE_POST_LINK += echo "i m a linux";
 #}
