@@ -2,7 +2,7 @@ branches:
   only:
     - /^av/.*$/
 install:
-  - choco install InnoSetup libsndfile
+  - choco install InnoSetup sndfile
   - set QTDIR="C:\Qt\5.5\mingw492_32"
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set PATH=%PATH%;"C:\Program Files (x86)\Inno Setup 5"
